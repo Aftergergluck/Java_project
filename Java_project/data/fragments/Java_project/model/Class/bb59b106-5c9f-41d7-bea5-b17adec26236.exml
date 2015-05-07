@@ -3,6 +3,7 @@
   <DEPS>
     <ID name="Interface_graphique" mc="Class" uid="bb59b106-5c9f-41d7-bea5-b17adec26236"/>
     <EXTID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="Interface_graphique" mc="Class" uid="bb59b106-5c9f-41d7-bea5-b17adec26236"/>
@@ -19,6 +20,49 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="entreeClavier" mc="Operation" uid="c7a70eb5-7b6c-4bdf-bc52-bd5f82ae7a26"/>
+          <PID name="Interface_graphique" mc="Class" uid="bb59b106-5c9f-41d7-bea5-b17adec26236"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[entreeClavier]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="d4a1756a-6c84-40dc-8cee-0445e022b21f"/>
+                <PID name="Interface_graphique" mc="Class" uid="bb59b106-5c9f-41d7-bea5-b17adec26236"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
           <ID name="contrôle" mc="AssociationEnd" uid="e213b6c7-be96-4131-a8fa-fc2028293add"/>
