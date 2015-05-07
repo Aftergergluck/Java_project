@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Java_project" version="3">
+  <DEPS>
+    <ID name="Java_project" mc="AnalystProject" uid="e4812a46-9ba2-403c-8539-ae4f2237e3be"/>
+    <COMPID name="Java_project" mc="PropertyContainer" uid="d5310de9-c386-4c70-88f1-c9f3db2bd64f"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Java_project" mc="AnalystProject" uid="e4812a46-9ba2-403c-8539-ae4f2237e3be"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Java_project]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="PropertyRoot">
+        <COMPID name="Java_project" mc="PropertyContainer" uid="d5310de9-c386-4c70-88f1-c9f3db2bd64f"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

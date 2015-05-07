@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="java_project" version="3">
+  <DEPS>
+    <ID name="java_project" mc="Package" uid="c70cc1cd-348f-430d-9a07-e83260fd4a46"/>
+    <COMPID name="Activer / désactiver appareil" mc="UseCase" uid="60314f0f-4ba6-4f0d-b93b-231d071bcba9"/>
+    <COMPID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
+    <COMPID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
+    <COMPID name="Affecter un ordinateur" mc="UseCase" uid="3de5653c-34da-49b2-9a41-750dbfc9ba28"/>
+    <COMPID name="Ajouter un appareil" mc="UseCase" uid="81e496a5-f0a6-4231-8168-4498c6b4ba3b"/>
+    <COMPID name="Ajouter une salle" mc="UseCase" uid="dac6627a-1ce7-427e-bc1e-9bb274d84385"/>
+    <COMPID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+    <COMPID name="Carte_reseau" mc="Class" uid="67ba08e9-593a-458a-b286-c898e1da6bbd"/>
+    <COMPID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+    <COMPID name="Donner le système d'exploitation" mc="UseCase" uid="87cc98f4-68c9-4040-8b11-4490126e2e3c"/>
+    <COMPID name="Donner un emplacement géographique à un appareil" mc="UseCase" uid="ee060736-0bdf-4d8b-9873-045c5938fbe5"/>
+    <COMPID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+    <COMPID name="Interaction" mc="Interaction" uid="128edb15-2379-41ea-8a36-86373fefa11f"/>
+    <COMPID name="Interface_graphique" mc="Class" uid="bb59b106-5c9f-41d7-bea5-b17adec26236"/>
+    <COMPID name="Local" mc="Class" uid="dd61ef1d-548c-48a6-9429-d357b16d743e"/>
+    <COMPID name="Mettre-à-jour un appareil" mc="UseCase" uid="96087501-d0c6-4a39-ad39-1a7748e99b00"/>
+    <COMPID name="Nommer un appareil" mc="UseCase" uid="29af2b72-9e7e-4ed0-92bf-ceedc7d4e9dd"/>
+    <COMPID name="Observer le réseau" mc="UseCase" uid="3e145a16-f12f-4224-af9e-46a8c9789a3d"/>
+    <COMPID name="Salle" mc="Class" uid="f66223d4-b7b9-4871-9941-95440dcc1dbc"/>
+    <COMPID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
+    <COMPID name="java_project Use Case diagram" mc="UseCaseDiagram" uid="62466795-74f7-4c91-b8d6-3d67b88fcb7c"/>
+    <COMPID name="overview diagram" mc="ClassDiagram" uid="7fd1547d-3ffe-428c-b048-455bf01a9941"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="java_project" mc="Package" uid="c70cc1cd-348f-430d-9a07-e83260fd4a46"/>
+    <PID name="Java_project" mc="Project" uid="6d0c1383-eea9-4846-915c-2400daf17609"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[java_project]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Interaction" mc="Interaction" uid="128edb15-2379-41ea-8a36-86373fefa11f"/>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
+        <COMPID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+        <COMPID name="Ajouter une salle" mc="UseCase" uid="dac6627a-1ce7-427e-bc1e-9bb274d84385"/>
+        <COMPID name="Ajouter un appareil" mc="UseCase" uid="81e496a5-f0a6-4231-8168-4498c6b4ba3b"/>
+        <COMPID name="Affecter un ordinateur" mc="UseCase" uid="3de5653c-34da-49b2-9a41-750dbfc9ba28"/>
+        <COMPID name="Activer / désactiver appareil" mc="UseCase" uid="60314f0f-4ba6-4f0d-b93b-231d071bcba9"/>
+        <COMPID name="Observer le réseau" mc="UseCase" uid="3e145a16-f12f-4224-af9e-46a8c9789a3d"/>
+        <COMPID name="Mettre-à-jour un appareil" mc="UseCase" uid="96087501-d0c6-4a39-ad39-1a7748e99b00"/>
+        <COMPID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
+        <COMPID name="Nommer un appareil" mc="UseCase" uid="29af2b72-9e7e-4ed0-92bf-ceedc7d4e9dd"/>
+        <COMPID name="Donner un emplacement géographique à un appareil" mc="UseCase" uid="ee060736-0bdf-4d8b-9873-045c5938fbe5"/>
+        <COMPID name="Donner le système d'exploitation" mc="UseCase" uid="87cc98f4-68c9-4040-8b11-4490126e2e3c"/>
+        <COMPID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
+        <COMPID name="Local" mc="Class" uid="dd61ef1d-548c-48a6-9429-d357b16d743e"/>
+        <COMPID name="Salle" mc="Class" uid="f66223d4-b7b9-4871-9941-95440dcc1dbc"/>
+        <COMPID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+        <COMPID name="Interface_graphique" mc="Class" uid="bb59b106-5c9f-41d7-bea5-b17adec26236"/>
+        <COMPID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+        <COMPID name="Carte_reseau" mc="Class" uid="67ba08e9-593a-458a-b286-c898e1da6bbd"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="ClassDiagram" uid="7fd1547d-3ffe-428c-b048-455bf01a9941"/>
+        <COMPID name="java_project Use Case diagram" mc="UseCaseDiagram" uid="62466795-74f7-4c91-b8d6-3d67b88fcb7c"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

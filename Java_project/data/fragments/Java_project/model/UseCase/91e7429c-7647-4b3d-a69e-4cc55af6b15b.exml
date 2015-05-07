@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Décrire un appareil" version="3">
+  <DEPS>
+    <ID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+    <EXTID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
+    <EXTID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
+    <EXTID name="Donner le système d'exploitation" mc="UseCase" uid="87cc98f4-68c9-4040-8b11-4490126e2e3c"/>
+    <EXTID name="Donner un emplacement géographique à un appareil" mc="UseCase" uid="ee060736-0bdf-4d8b-9873-045c5938fbe5"/>
+    <EXTID name="Nommer un appareil" mc="UseCase" uid="29af2b72-9e7e-4ed0-92bf-ceedc7d4e9dd"/>
+    <FOREIGNID name="constraint" mc="NoteType" uid="00bc0b8c-0000-251b-0000-000000000000"/>
+    <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+    <FOREIGNID name="exception" mc="NoteType" uid="00bc0b8c-0000-2519-0000-000000000000"/>
+    <FOREIGNID name="include" mc="Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
+    <FOREIGNID name="non-functional constraint" mc="NoteType" uid="00bc0c08-0000-242c-0000-000000000000"/>
+    <FOREIGNID name="postcondition" mc="NoteType" uid="00bc0b8c-0000-2517-0000-000000000000"/>
+    <FOREIGNID name="precondition" mc="NoteType" uid="00bc0b8c-0000-2515-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+    <PID name="java_project" mc="Package" uid="c70cc1cd-348f-430d-9a07-e83260fd4a46"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Décrire un appareil]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Used">
+        <OBJECT>
+          <ID name="UseCaseDependency" mc="UseCaseDependency" uid="070f2c82-dc41-41fd-ba51-99e52318cbd3"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="include" mc="Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="UseCaseDependency" mc="UseCaseDependency" uid="118f81be-646f-4551-9445-930ad6470f11"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Nommer un appareil" mc="UseCase" uid="29af2b72-9e7e-4ed0-92bf-ceedc7d4e9dd"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="include" mc="Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="UseCaseDependency" mc="UseCaseDependency" uid="c0374e4e-29ae-4704-a792-85c0ffab0406"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Donner un emplacement géographique à un appareil" mc="UseCase" uid="ee060736-0bdf-4d8b-9873-045c5938fbe5"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="include" mc="Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="UseCaseDependency" mc="UseCaseDependency" uid="d7e449ea-ad53-472a-99b2-24e0123d3530"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Donner le système d'exploitation" mc="UseCase" uid="87cc98f4-68c9-4040-8b11-4490126e2e3c"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="include" mc="Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="UseCaseDependency" mc="UseCaseDependency" uid="a9c6d4c4-fbf1-4875-9495-6935449d74ce"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
+            </LINK>
+            <LINK relation="Extension">
+              <FOREIGNID name="include" mc="Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Note" uid="13781b8e-aad7-4f4c-8971-abab31c4ddad"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Note" uid="ef021bc7-5bcf-4c8d-b373-869a997e338f"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="constraint" mc="NoteType" uid="00bc0b8c-0000-251b-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Note" uid="83818961-4316-47f5-9741-fc7ddd6802c1"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="non-functional constraint" mc="NoteType" uid="00bc0c08-0000-242c-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Note" uid="7ab4f062-be52-40dd-a29a-599ff2a3143f"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="exception" mc="NoteType" uid="00bc0b8c-0000-2519-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Note" uid="b776d8c5-b4a5-46fe-adb1-f13f37b0646d"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="precondition" mc="NoteType" uid="00bc0b8c-0000-2515-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="Note" uid="86befb1a-663f-4bd8-b06a-4a2a8e5fd1c0"/>
+          <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="postcondition" mc="NoteType" uid="00bc0b8c-0000-2517-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
