@@ -7,10 +7,11 @@ package com.mycompany.maven_java_project;
 import java.sql.*;
 
 /**
- *
+ * Cette classe sert à se connecter à la BDD.
  * @author 21204416
  */
 public class Connect {
+    
     public static void main (String[] args)
     {
         try {
