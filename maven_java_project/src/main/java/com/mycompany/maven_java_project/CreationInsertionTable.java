@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.maven_java_project;
 
 import java.sql.*;
@@ -18,7 +15,7 @@ public class CreationInsertionTable {
             Class.forName("org.postgresql.Driver");
             
             // Identifiants de connexion à la base
-            String url = "jdbc:postgresql://localhost:5432/AppliReseau";
+            String url = "jdbc:postgresql://localhost:5432/java";
             String user = "postgres";
             String pwd = "postgres";
             
@@ -27,7 +24,7 @@ public class CreationInsertionTable {
             
             // Création de la requête
             Statement request = conn.createStatement();
-            String query = "";
+            String query = "INSERT INTO Appareil (idAppareil,nomApp,typeAppareil,SystExpAppareil,nomFirmware,Active,lieuAppareil,numSalle) VALUES (5,'chirac','ordinateur', 'windows','BIOS','TRUE','U2', 6);";
             
             // Exécution de la requête et récupération du résultat
             ResultSet res = request.executeQuery(query);

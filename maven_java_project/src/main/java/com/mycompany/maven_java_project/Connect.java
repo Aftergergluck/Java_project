@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.maven_java_project;
 
 import java.sql.*;
@@ -18,7 +15,7 @@ public class Connect {
           Class.forName("org.postgresql.Driver");
           System.out.println("Driver O.K.");
 
-          String url = "jdbc:postgresql://localhost:5432/AppliReseau";
+          String url = "jdbc:postgresql://localhost:5432/java";
           String user = "postgres";
           String passwd = "postgres";
 
