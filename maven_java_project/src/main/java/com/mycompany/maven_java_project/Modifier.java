@@ -373,7 +373,7 @@ public class Modifier extends javax.swing.JFrame {
         else{
             ((CardLayout)jPanel1.getLayout()).show(jPanel1, "salle");
         }
-        System.out.println(valueComboBox);
+        System.out.println(valueComboBox);    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
