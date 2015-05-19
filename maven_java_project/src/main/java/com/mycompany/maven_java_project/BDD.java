@@ -9,8 +9,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author BADENS
+ * Intéraction avec la BDD
+ * @author Florian
  */
 public class BDD {
 Connection conn;
@@ -18,7 +18,11 @@ Connection conn;
 ResultSet results;
 
 
-    
+    /**
+     * Fonction de connexion à la BDD
+     * 
+     * @author Florian
+     */
     public void connect(){
         try {
           Class.forName("org.postgresql.Driver");
@@ -37,7 +41,12 @@ ResultSet results;
         
     }
     
-    
+    /**
+     * Fonction permettant d'exécuter une requête passée en paramètre
+     * 
+     * @author Florian
+     * 
+     */
     public void request(String req){
                 try {
            
@@ -54,6 +63,18 @@ ResultSet results;
         }
     }
     
+    
+    /**
+     * Fonction testant si un attribut est présent dans la BDD
+     * Paramètres : table , attribut , valeur attribut
+     * 
+     * @author Florian
+     * @return Boolean
+     * 
+     * @param attribut
+     * @param valeur
+     */
+    
     public boolean exist(String table, String attribut, String valeur) throws SQLException{
         Statement request = conn.createStatement();        
         String query = "SELECT * FROM " +table+ " WHERE " +attribut+ " = '" +valeur+ "';";
@@ -61,7 +82,11 @@ ResultSet results;
          return request.executeQuery(query).next();
     }
     
-    
+    /**
+     * Fonction permettant de faire un Select
+     * @author Florian
+     * @return Resultat
+     */
     public ResultSet select(String req){
         try {
            

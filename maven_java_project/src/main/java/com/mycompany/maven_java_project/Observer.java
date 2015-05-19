@@ -7,7 +7,7 @@ package com.mycompany.maven_java_project;
 
 /**
  *
- * @author Flo0w
+ * @author Florian
  */
 public class Observer extends javax.swing.JFrame {
 

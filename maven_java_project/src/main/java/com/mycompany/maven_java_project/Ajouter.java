@@ -14,8 +14,8 @@ import java.util.logging.Logger;
 
 
 /**
- *
- * @author Flo0w
+ *Ajout d'un composant dans la BDD
+ * @author Florian
  */
 public class Ajouter extends javax.swing.JFrame {
 
@@ -652,6 +652,14 @@ public class Ajouter extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    
+    /** Fonction d'affichage dans le ComboBox principal pour choisir ce que l'on veut ajouter
+     * Prmet de choisir d'ajouter un local, salle ou équipement
+     * AFfichage du cardLayout approprier
+     * 
+     * @author Florian
+     * @param evt 
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String valueBox = "";
@@ -794,6 +802,12 @@ public class Ajouter extends javax.swing.JFrame {
         });
     }
     
+    
+    /** Vérifie si les entrées pour le local sont bonnes
+     * 
+     * @return booléan
+     *  @author Florian
+     */
     private boolean verifEntreeLocal(){
         String nomLoc = jTextFieldNL.getText();
         String addrLocal = jTextFieldAL.getText();
@@ -817,6 +831,13 @@ public class Ajouter extends javax.swing.JFrame {
         
     }
     
+    
+    /** Vérifie si les entrées pour l'ajout d'une salle sont comformes
+     * 
+     * 
+     * @author Florian
+     * @return booléan 
+     */
     private boolean verifEntreeSalle(){
         String nomSalle = jTextField15.getText();
         if(nomSalle.length() > 32){
@@ -827,11 +848,18 @@ public class Ajouter extends javax.swing.JFrame {
         return true;
     }
     
+    
+    /**
+     * Vérifie si l'adress MAC est correcte
+     * 
+     * @author Florian
+     * @return booléan
+     */
     private boolean verifAddrMAC(String addr){
         if(addr.length() != 17){
             return false;
         }
-        addr.toLowerCase();
+        addr = addr.toLowerCase();
         int i = 0;
         int val;
         while(i < addr.length()){
@@ -847,7 +875,11 @@ public class Ajouter extends javax.swing.JFrame {
         return true;
         
     }
-    
+        /** Vérifie si les entrées pour l'ajout d'un ordi sont comformes
+         *  
+         * @author Florian
+         * @return booléan
+         */
     
     private boolean verifEntreeOrdi(){
         String nomO = jTextField1.getText();
@@ -875,7 +907,11 @@ public class Ajouter extends javax.swing.JFrame {
         return true;
        
     }
-    
+        /** Vérifie si les entrées pour l'ajout d'une tablette sont comformes
+         * @author Florian
+         * @return booléan 
+         */
+
     private boolean verifEntreeTablette(){
         String nomT = jTextField5.getText();
         String addrM = jTextField6.getText();
@@ -901,6 +937,14 @@ public class Ajouter extends javax.swing.JFrame {
         
         return true;
  }
+    
+    
+        /** Vérifie si les entrées pour l'ajout d'un routeur sont comformes
+         * 
+         * @author Florian
+         * @return booléan
+         */
+
     private boolean verifEntreeRouteur(){
          String nomR = jTextField10.getText();
         String addrM = jTextField11.getText();
@@ -927,7 +971,11 @@ public class Ajouter extends javax.swing.JFrame {
         return true;       
     }
     
-    
+    /**
+     * Ajoute un ordi dans la BDD
+     * @author Florian
+     * 
+     */
     private void ajouterOrdi(){
         if(this.verifEntreeOrdi()){
             try {
@@ -962,6 +1010,11 @@ public class Ajouter extends javax.swing.JFrame {
         }              
     }
     
+    /**
+     * Ajoute une tablette dans la BDD
+     * 
+     * @author Florian
+     */
     private void ajouterTablette(){
          if(this.verifEntreeTablette()){
             try {
@@ -996,6 +1049,11 @@ public class Ajouter extends javax.swing.JFrame {
         }        
     }
     
+    
+    /**
+     * Ajoute un routeur dans la BDD
+     * @author Florian
+     */
     private void ajouterRouteur(){
           if(this.verifEntreeRouteur()){
             try {
@@ -1030,7 +1088,10 @@ public class Ajouter extends javax.swing.JFrame {
         }        
     }
     
-    
+    /**
+     * Aujoute un appareil dans la BDD. Appelle les méthodes ajouterOrdi , tablette ou routeur en fonction du comboBox
+     * @author FLorian
+     */
     private void ajouterAppareil(){
         String type = (String)jComboBox1.getSelectedItem();
         if("     Ordinateur".equals(type)){
@@ -1050,7 +1111,11 @@ public class Ajouter extends javax.swing.JFrame {
     
     
     
-    
+    /** Construit dynamiquement le comboBox pour l'entrée d'une salle
+     * 
+     * @author Florian
+     * @return ComboBoxModel 
+     */
     private ComboBoxModel getComboBoxModelLocal() {
     
         try {
@@ -1080,6 +1145,12 @@ public class Ajouter extends javax.swing.JFrame {
 
     }
     
+    
+    /** Construit dynamiquement le comboBox pour l'ajou d'un appareil.
+     * 
+     * @author Florian
+     * @return ComboBoxModel
+     */
     private ComboBoxModel getComboBoxModelSalle(){
          try {
             // TODO add your handling code here:
