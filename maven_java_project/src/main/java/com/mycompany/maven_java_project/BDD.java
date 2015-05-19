@@ -13,11 +13,14 @@ import java.util.logging.Logger;
  * @author BADENS
  */
 public class BDD {
-Connection conn;
+    
+    // Attributs
+    Connection conn;
+    ResultSet results;
 
-ResultSet results;
-
-
+    public ResultSet getResults() {
+        return results;
+    }
     
     public void connect(){
         try {
@@ -62,7 +65,7 @@ ResultSet results;
     }
     
     
-    public ResultSet select(String req){
+    public void select(String req){
         try {
            
             // Création de la requête
@@ -76,7 +79,6 @@ ResultSet results;
         catch (Exception e) {
             e.printStackTrace();
         }
-    return results;
         
     } 
     

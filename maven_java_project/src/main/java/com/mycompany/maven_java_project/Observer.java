@@ -5,6 +5,11 @@
  */
 package com.mycompany.maven_java_project;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Flo0w
@@ -16,6 +21,8 @@ public class Observer extends javax.swing.JFrame {
      */
     public Observer() {
         initComponents();
+        String label = afficherLocaux("");
+        jLabel2.setText(label);
     }
 
     /**
@@ -28,11 +35,14 @@ public class Observer extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Observation du réseau");
 
         jLabel1.setText("Observer le réseau");
+
+        jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -42,13 +52,19 @@ public class Observer extends javax.swing.JFrame {
                 .addContainerGap(159, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(149, 149, 149))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -94,12 +110,17 @@ public class Observer extends javax.swing.JFrame {
         try {
             BDD bdd = new BDD();
             bdd.connect();
-            bdd.select("SELECT * FROM Locaux");
-        } catch (Exception e) {
+            bdd.select("SELECT nomLocal FROM Local");
+            ResultSet res = bdd.getResults();
             
+            // Parcourir la liste des locaux et les ajouter au texte
+            while (res.next()) {
+                text += res.getString(1)+"\n";
+                text = afficherSalles(text);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        // Parcourir la liste des locaux et les ajouter au texte
         
         // Renvoyer le texte modifié
         return text;
@@ -107,8 +128,20 @@ public class Observer extends javax.swing.JFrame {
     
     public String afficherSalles(String text) {
         // Obtenir la liste des salles
-        
-        // Parcourir la liste des salles et les ajouter au texte
+        try {
+            BDD bdd = new BDD();
+            bdd.connect();
+            bdd.select("SELECT nomSalle FROM Salle");
+            ResultSet res = bdd.getResults();
+            
+            // Parcourir la liste des salles et les ajouter au texte
+            while (res.next()) {
+                text += "   "+res.getString(1)+"\n";
+                text = afficherAppareil(text);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         // Renvoyer le texte modifié
         return text;
@@ -116,21 +149,26 @@ public class Observer extends javax.swing.JFrame {
     
     public String afficherAppareil(String text) {
         // Obtenir la liste des appareils
-        
-        // Parcourir la liste des appareils et les ajouter au texte
+        try {
+            BDD bdd = new BDD();
+            bdd.connect();
+            bdd.select("SELECT nomApp FROM Appareil");
+            ResultSet res = bdd.getResults();
+            
+            // Parcourir la liste des locaux et les ajouter au texte
+            while (res.next()) {
+                text += "       "+res.getString(1)+"\n";
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         // Renvoyer le texte modifié
         return text;
     }
-    
-    public void afficher() {
-        String label = "";
-        afficherLocaux(label);
-        afficherSalles(label);
-        afficherAppareil(label);
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

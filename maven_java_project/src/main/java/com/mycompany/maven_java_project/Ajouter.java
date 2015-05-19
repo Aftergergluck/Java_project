@@ -1057,12 +1057,12 @@ public class Ajouter extends javax.swing.JFrame {
             // TODO add your handling code here:
             BDD bd = new BDD();
             bd.connect();
-            ResultSet resultats = bd.select("SELECT nomLocal FROM Local");
+            bd.select("SELECT nomLocal FROM Local");
             String[] locaux = new String[100];
             int i = 0;
-            while(resultats.next())
+            while(bd.getResults().next())
             {
-                locaux[i] = resultats.getString(1);
+                locaux[i] = bd.getResults().getString(1);
                 i++;
             }
             String[] item = new String[i];
@@ -1085,7 +1085,8 @@ public class Ajouter extends javax.swing.JFrame {
             // TODO add your handling code here:
             BDD bd = new BDD();
             bd.connect();
-            ResultSet resultatsL = bd.select("SELECT nomLocal FROM Local");
+            bd.select("SELECT nomLocal FROM Local");
+            ResultSet resultatsL = bd.getResults();
             String[] locaux = new String[100];
             String[] Salle = new String[100];
             int cptl = 0;
@@ -1095,11 +1096,11 @@ public class Ajouter extends javax.swing.JFrame {
             {
                 locaux[cptl] = resultatsL.getString(1);
                 req = "SELECT nomSalle FROM Salle WHERE lieuSalle = '" +locaux[cptl]+"';";
-                ResultSet resultatS = bd.select(req);
+                bd.select(req);
                 Salle[cptS] = locaux[cptl];
                 cptS++;
-                while(resultatS.next()){
-                    Salle[cptS] = "     ".concat(resultatS.getString(1));
+                while(bd.getResults().next()){
+                    Salle[cptS] = "     ".concat(bd.getResults().getString(1));
                     cptS++;
                 }
                 cptl++;
