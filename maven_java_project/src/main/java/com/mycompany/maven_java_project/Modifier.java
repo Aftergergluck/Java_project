@@ -466,3 +466,6 @@ public class Modifier extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
 }
+
+
+//test de modif
