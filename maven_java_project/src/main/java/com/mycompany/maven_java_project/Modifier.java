@@ -109,6 +109,7 @@ public class Modifier extends javax.swing.JFrame {
 
         jButton2.setText("Valider");
 
+        jTextField1.setText((String)jComboBox1.getSelectedItem());
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -162,6 +163,8 @@ public class Modifier extends javax.swing.JFrame {
         jLabel5.setText("Modifier une salle");
 
         jLabel6.setText("Nom de la salle :");
+
+        jTextField2.setText(this.enleverEspace((String)jComboBox1.getSelectedItem()));
 
         jButton4.setText("Valider");
 
@@ -370,6 +373,7 @@ public class Modifier extends javax.swing.JFrame {
         else{
             ((CardLayout)jPanel1.getLayout()).show(jPanel1, "salle");
         }
+        System.out.println(valueComboBox);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -472,6 +476,13 @@ public class Modifier extends javax.swing.JFrame {
         
     }
     
+    
+    private String enleverEspace(String chaine){
+        while(chaine.charAt(0) == ' '){
+            chaine = chaine.substring(1);
+        }
+        return chaine;
+    }
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
