@@ -39,16 +39,16 @@ public class Observer extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(158, 158, 158)
+                .addContainerGap(159, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(149, 149, 149))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(251, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
 
         pack();
@@ -87,6 +87,47 @@ public class Observer extends javax.swing.JFrame {
                 new Observer().setVisible(true);
             }
         });
+    }
+    
+    public String afficherLocaux(String text) {
+        // Obtenir la liste des locaux
+        try {
+            BDD bdd = new BDD();
+            bdd.connect();
+            bdd.select("SELECT * FROM Locaux");
+        } catch (Exception e) {
+            
+        }
+        
+        // Parcourir la liste des locaux et les ajouter au texte
+        
+        // Renvoyer le texte modifié
+        return text;
+    }
+    
+    public String afficherSalles(String text) {
+        // Obtenir la liste des salles
+        
+        // Parcourir la liste des salles et les ajouter au texte
+        
+        // Renvoyer le texte modifié
+        return text;
+    }
+    
+    public String afficherAppareil(String text) {
+        // Obtenir la liste des appareils
+        
+        // Parcourir la liste des appareils et les ajouter au texte
+        
+        // Renvoyer le texte modifié
+        return text;
+    }
+    
+    public void afficher() {
+        String label = "";
+        afficherLocaux(label);
+        afficherSalles(label);
+        afficherAppareil(label);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
