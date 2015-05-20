@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Flo0w
+ * @author Florian
  */
 public class Observer extends javax.swing.JFrame {
 

@@ -7,8 +7,8 @@ package com.mycompany.maven_java_project;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 /**
- *
- * @author Flo0w
+ * Classe Principale, début du programme
+ * @author Florian
  */
 public class Principal extends javax.swing.JFrame {
 
