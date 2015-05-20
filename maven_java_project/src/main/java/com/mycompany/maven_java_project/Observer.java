@@ -5,12 +5,16 @@
  */
 package com.mycompany.maven_java_project;
 
+import java.awt.FlowLayout;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -23,8 +27,6 @@ public class Observer extends javax.swing.JFrame {
      */
     public Observer() {
         initComponents();
-        String label = afficherLocaux("");
-        jLabel2.setText(label);
     }
 
     /**
@@ -38,35 +40,46 @@ public class Observer extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Observation du réseau");
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel1.setText("Observer le réseau");
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText(observerReseauLabel());
+        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLabel3.setText("jLabel3");
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(159, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(149, 149, 149))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(104, 104, 104)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -169,9 +182,67 @@ public class Observer extends javax.swing.JFrame {
         return text;
     }
 
-    
+    private String observerReseauLabel(){
+    String chaine = "<html>";
+        try {
+            // TODO add your handling code here:
+            BDD bd = new BDD();
+            bd.connect();
+            bd.select("SELECT nomLocal FROM Local");
+            ResultSet resultatsL = bd.getResults();
+            String[] locaux = new String[100];
+            String[] Salle = new String[100];
+            String[] App = new String[100];
+            int cptl = 0;
+            int cptS = 0;
+            int cptA = 0;
+            String req;
+            while(resultatsL.next())
+            {
+                locaux[cptl] = resultatsL.getString(1);
+                req = "SELECT nomSalle FROM Salle WHERE lieuSalle = '" +locaux[cptl]+"';";
+                bd.select(req);
+                ResultSet resultS = bd.getResults();
+                Salle[cptS] = locaux[cptl];
+                cptS++;
+                chaine += "<br><b>"+locaux[cptl]+"</b><br>";
+                while(resultS.next()){
+                    Salle[cptS] = resultS.getString(1);
+                    chaine +="&nbsp;&nbsp;&nbsp;&nbsp;<i>"+ Salle[cptS]+"</i><br>";
+                    req = "SELECT nomapp From Appareil WHERE lieuappareil = '" +Salle[cptS]+"' AND active = 'true';";
+                    Salle[cptS] = "     ".concat(Salle[cptS]);
+                    bd.select(req);
+                    ResultSet resultA = bd.getResults();
+                    App[cptA] = locaux[cptl];
+                    cptA++; 
+                    App[cptA] = Salle[cptS];
+                    cptA++;
+                    cptS++;
+                    while(resultA.next()){
+                        App[cptA] = "         ".concat(resultA.getString(1));
+                        chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ App[cptA]+ "<br>";
+                        cptA++;
+                    }
+                    
+                }
+                cptl++;
+            }
+
+           
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        chaine += "</html>";
+        return chaine;
+        
+        
+        
+        
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
