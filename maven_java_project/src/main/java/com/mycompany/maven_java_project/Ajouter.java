@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 
 /**
- *Ajout d'un composant dans la BDD
+ *Ajout d'un composant dans la Controleur
  * @author Florian
  */
 public class Ajouter extends javax.swing.JFrame {
@@ -694,7 +694,7 @@ public class Ajouter extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         if(this.verifEntreeLocal()){
-            BDD bd = new BDD();
+            Controleur bd = new Controleur();
             bd.connect(); 
             String nomLoc = jTextFieldNL.getText();
             String addrLocal = jTextFieldAL.getText();
@@ -734,7 +734,7 @@ public class Ajouter extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         if(this.verifEntreeSalle()){
             try {
-                BDD bd = new BDD();
+                Controleur bd = new Controleur();
                 bd.connect();
                 String nomS = jTextField15.getText();
                 String valueBox = (String)jComboBox2.getSelectedItem();
@@ -972,14 +972,14 @@ public class Ajouter extends javax.swing.JFrame {
     }
     
     /**
-     * Ajoute un ordi dans la BDD
+     * Ajoute un ordi dans la Controleur
      * @author Florian
      * 
      */
     private void ajouterOrdi(){
         if(this.verifEntreeOrdi()){
             try {
-                BDD bd = new BDD();
+                Controleur bd = new Controleur();
                 bd.connect();
                 String nomO = jTextField1.getText();
                 String valueBoxOS = (String)jComboBox5.getSelectedItem();
@@ -1011,14 +1011,14 @@ public class Ajouter extends javax.swing.JFrame {
     }
     
     /**
-     * Ajoute une tablette dans la BDD
+     * Ajoute une tablette dans la Controleur
      * 
      * @author Florian
      */
     private void ajouterTablette(){
          if(this.verifEntreeTablette()){
             try {
-                BDD bd = new BDD();
+                Controleur bd = new Controleur();
                 bd.connect();
                 String nomT = jTextField5.getText();
                 String valueBoxOS = (String)jComboBox3.getSelectedItem();
@@ -1051,13 +1051,13 @@ public class Ajouter extends javax.swing.JFrame {
     
     
     /**
-     * Ajoute un routeur dans la BDD
+     * Ajoute un routeur dans la Controleur
      * @author Florian
      */
     private void ajouterRouteur(){
           if(this.verifEntreeRouteur()){
             try {
-                BDD bd = new BDD();
+                Controleur bd = new Controleur();
                 bd.connect();
                 String nomR = jTextField10.getText();
                 String valueBoxOS = " ";
@@ -1089,7 +1089,7 @@ public class Ajouter extends javax.swing.JFrame {
     }
     
     /**
-     * Aujoute un appareil dans la BDD. Appelle les méthodes ajouterOrdi , tablette ou routeur en fonction du comboBox
+     * Aujoute un appareil dans la Controleur. Appelle les méthodes ajouterOrdi , tablette ou routeur en fonction du comboBox
      * @author FLorian
      */
     private void ajouterAppareil(){
@@ -1120,7 +1120,7 @@ public class Ajouter extends javax.swing.JFrame {
     
         try {
             // TODO add your handling code here:
-            BDD bd = new BDD();
+            Controleur bd = new Controleur();
             bd.connect();
             bd.select("SELECT nomLocal FROM Local");
             String[] locaux = new String[100];
@@ -1154,7 +1154,7 @@ public class Ajouter extends javax.swing.JFrame {
     private ComboBoxModel getComboBoxModelSalle(){
          try {
             // TODO add your handling code here:
-            BDD bd = new BDD();
+            Controleur bd = new Controleur();
             bd.connect();
             bd.select("SELECT nomLocal FROM Local");
             ResultSet resultatsL = bd.getResults();

@@ -9,10 +9,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Interaction avec la BDD
+ * Interaction avec la Controleur
  * @author Florian
  */
-public class BDD {
+public class Controleur {
     
     // Attributs
     Connection conn;
@@ -23,7 +23,7 @@ public class BDD {
     }
     
     /**
-     * Fonction de connexion à la BDD
+     * Fonction de connexion à la Controleur
      * 
      * @author Florian
      */
@@ -69,7 +69,7 @@ public class BDD {
     
     
     /**
-     * Fonction testant si un attribut est présent dans la BDD
+     * Fonction testant si un attribut est présent dans la Controleur
      * Paramètres : table , attribut , valeur attribut
      * 
      * @author Florian
