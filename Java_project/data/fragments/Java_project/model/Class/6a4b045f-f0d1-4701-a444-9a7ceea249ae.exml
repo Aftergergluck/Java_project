@@ -1,14 +1,17 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Contrôle" version="3">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Controle" version="3">
   <DEPS>
-    <ID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+    <ID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
     <EXTID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+    <EXTID name="Carte_reseau" mc="Class" uid="67ba08e9-593a-458a-b286-c898e1da6bbd"/>
     <EXTID name="Local" mc="Class" uid="dd61ef1d-548c-48a6-9429-d357b16d743e"/>
+    <EXTID name="Salle" mc="Class" uid="f66223d4-b7b9-4871-9941-95440dcc1dbc"/>
+    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
     <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
   </DEPS>
   <OBJECT>
-    <ID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+    <ID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
     <PID name="java_project" mc="Package" uid="c70cc1cd-348f-430d-9a07-e83260fd4a46"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -18,78 +21,14 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Contrôle]]></ATT>
+      <ATT name="Name"><![CDATA[Controle]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="affecterAppSalle" mc="Operation" uid="ae0390aa-e04a-4086-9ccb-361ad355f3fe"/>
-          <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[affecterAppSalle]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="nomApp" mc="Parameter" uid="9f8f0a08-0a71-4c52-90d4-9ef6724ba368"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[nomApp]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="numeroSalle" mc="Parameter" uid="d6c4372f-b00d-45e0-b692-0a2c720ebe02"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[numeroSalle]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="activerAppareil" mc="Operation" uid="7167e578-e319-410b-a258-8caa614c5728"/>
-          <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -104,7 +43,7 @@
             <COMP relation="IO">
               <OBJECT>
                 <ID name="nomApp" mc="Parameter" uid="392cf33d-1ba5-4a0c-9f96-a9de7f2e4764"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -130,7 +69,7 @@
         </OBJECT>
         <OBJECT>
           <ID name="desactiverAppareil" mc="Operation" uid="3c2876ef-baaf-4c4a-bef5-b5736d015d9a"/>
-          <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -145,7 +84,7 @@
             <COMP relation="IO">
               <OBJECT>
                 <ID name="nomApp" mc="Parameter" uid="807285e9-66c1-4587-96fe-5dc93bb4539f"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -170,8 +109,8 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="decrireApp" mc="Operation" uid="0746ef1a-357a-4607-822c-ac9cf3547648"/>
-          <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ID name="modifierLocal" mc="Operation" uid="69de6747-a7c6-451c-8835-3105fbdfd3fd"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -179,14 +118,426 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[decrireApp]]></ATT>
+            <ATT name="Name"><![CDATA[modifierLocal]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="nom" mc="Parameter" uid="9a61e3fc-b749-47f8-9ead-54cfa9c81521"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[nom]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="adr" mc="Parameter" uid="c117ceb6-489e-440f-a056-b55fe0459c0c"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[adr]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="modifierSalle" mc="Operation" uid="615f5e63-ec05-41ef-a99e-1a7bf924a25a"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[modifierSalle]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="nom" mc="Parameter" uid="80402db0-1f2f-4682-81f1-dc8ba0f2af6d"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[nom]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="emp" mc="Parameter" uid="2cc80145-2d1f-4993-9648-474aad571296"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[emp]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="capa" mc="Parameter" uid="6fe8bbc3-aa14-4d7d-b3d2-9039d872ccb2"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[capa]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="modifierApp" mc="Operation" uid="00f224e7-c3ba-4d77-b387-3fbe9d78bbce"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[modifierApp]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="nom" mc="Parameter" uid="9fd34ddc-98fa-4ed4-8a29-e786162870e2"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[nom]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="emp" mc="Parameter" uid="a1e7fff7-ee03-4b67-bb01-6ae63991c5ec"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[emp]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="sys" mc="Parameter" uid="5ded2b98-ad1b-4607-bccf-c5bc659ff93b"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[sys]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="actif" mc="Parameter" uid="e9fc620d-f15c-4988-9ed8-fb9c14b6da49"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[actif]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="ajouterSalle" mc="Operation" uid="63e9b2f9-a154-4e44-a85b-fdb875f04417"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[ajouterSalle]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="nom" mc="Parameter" uid="9d233da8-864b-48eb-95c5-ed199a4a2165"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[nom]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="capa" mc="Parameter" uid="14775847-9810-45a4-8c16-189ec705e2da"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[capa]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="emp" mc="Parameter" uid="59998534-fcd2-48b1-a82e-8e0e9762ee52"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[emp]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="ajouterLocal" mc="Operation" uid="478a3ff0-5b8e-42e6-b216-4cceec161955"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[ajouterLocal]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="nom" mc="Parameter" uid="d90ef8dd-65f0-4223-a1d0-740036eca46e"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[nom]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="adr" mc="Parameter" uid="b093fd64-9c53-4084-b986-d13f23404f20"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[adr]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="ajouterApp" mc="Operation" uid="0746ef1a-357a-4607-822c-ac9cf3547648"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[ajouterApp]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
                 <ID name="nomApp" mc="Parameter" uid="a7ab9e70-23aa-4e3f-a2d1-fb3af282b497"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -209,7 +560,7 @@
               </OBJECT>
               <OBJECT>
                 <ID name="typeApp" mc="Parameter" uid="4f1a1e83-0b91-458e-9033-d597f32c8f80"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -232,7 +583,7 @@
               </OBJECT>
               <OBJECT>
                 <ID name="sysExp" mc="Parameter" uid="692458a8-3488-4760-9a27-ff0d5596c938"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -255,7 +606,7 @@
               </OBJECT>
               <OBJECT>
                 <ID name="adrMac" mc="Parameter" uid="0bdfd51b-7df0-4bbf-bf5b-b3372f18790d"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -279,52 +630,11 @@
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
-        <OBJECT>
-          <ID name="obtenirListeLocaux" mc="Operation" uid="c79f652a-70a4-4af2-8ee7-7626e2884fef"/>
-          <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[obtenirListeLocaux]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="" mc="Parameter" uid="0d1b725d-9c93-4e20-b877-ee588c5653d0"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <ID name="Local" mc="Class" uid="dd61ef1d-548c-48a6-9429-d357b16d743e"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="liste_locaux" mc="AssociationEnd" uid="b0c12f09-a529-49eb-bcbc-afc7ab8aa650"/>
-          <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ID name="listeLocaux" mc="AssociationEnd" uid="b0c12f09-a529-49eb-bcbc-afc7ab8aa650"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -337,7 +647,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[liste_locaux]]></ATT>
+            <ATT name="Name"><![CDATA[listeLocaux]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -347,7 +657,7 @@
             <COMP relation="Opposite">
               <OBJECT>
                 <ID name="" mc="AssociationEnd" uid="bc8cda98-32b4-4b56-aff8-c936206002be"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -355,7 +665,7 @@
                   <ATT name="IsDerived">false</ATT>
                   <ATT name="IsOrdered">false</ATT>
                   <ATT name="IsUnique">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
                   <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
                   <ATT name="Visibility">Public</ATT>
                   <ATT name="IsClass">false</ATT>
@@ -365,12 +675,12 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="liste_locaux" mc="AssociationEnd" uid="b0c12f09-a529-49eb-bcbc-afc7ab8aa650"/>
+                    <COMPID name="listeLocaux" mc="AssociationEnd" uid="b0c12f09-a529-49eb-bcbc-afc7ab8aa650"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
                       <ID name="" mc="Association" uid="96cec83f-6422-44b0-a654-6437db2aff94"/>
-                      <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                      <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -384,7 +694,7 @@
             <COMP relation="Association">
               <OBJECT>
                 <ID name="" mc="Association" uid="96cec83f-6422-44b0-a654-6437db2aff94"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -395,8 +705,8 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="appareil" mc="AssociationEnd" uid="009482f9-dfa9-42f2-b1f3-2899371fae01"/>
-          <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ID name="listeSalle" mc="AssociationEnd" uid="acb9d933-a0db-4106-b213-aff5f359e3ea"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -405,21 +715,21 @@
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[appareil]]></ATT>
+            <ATT name="Name"><![CDATA[listeSalle]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+              <ID name="Salle" mc="Class" uid="f66223d4-b7b9-4871-9941-95440dcc1dbc"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="c658a95b-2353-400d-98ff-4b06c8a7a6be"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ID name="" mc="AssociationEnd" uid="f2e491fc-82b6-47f9-9c51-f99a3bc333d8"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -427,7 +737,7 @@
                   <ATT name="IsDerived">false</ATT>
                   <ATT name="IsOrdered">false</ATT>
                   <ATT name="IsUnique">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
                   <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
                   <ATT name="Visibility">Public</ATT>
                   <ATT name="IsClass">false</ATT>
@@ -437,12 +747,12 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="appareil" mc="AssociationEnd" uid="009482f9-dfa9-42f2-b1f3-2899371fae01"/>
+                    <COMPID name="listeSalle" mc="AssociationEnd" uid="acb9d933-a0db-4106-b213-aff5f359e3ea"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="aa721e60-5917-4b1b-9a44-f845f7491373"/>
-                      <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                      <ID name="" mc="Association" uid="200d26b7-4791-4bd1-bf84-be6ec6291d87"/>
+                      <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -455,8 +765,152 @@
             </COMP>
             <COMP relation="Association">
               <OBJECT>
-                <ID name="" mc="Association" uid="aa721e60-5917-4b1b-9a44-f845f7491373"/>
-                <PID name="Contrôle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ID name="" mc="Association" uid="200d26b7-4791-4bd1-bf84-be6ec6291d87"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="listeCarteReseau" mc="AssociationEnd" uid="7a1c90f9-194a-442f-b71a-b9e91e73b0f6"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[listeCarteReseau]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Carte_reseau" mc="Class" uid="67ba08e9-593a-458a-b286-c898e1da6bbd"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="9d7fe8f7-21f6-40b6-8f18-d1753a3fe67e"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="listeCarteReseau" mc="AssociationEnd" uid="7a1c90f9-194a-442f-b71a-b9e91e73b0f6"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="647c1497-4e52-488f-a5c7-5915b248665f"/>
+                      <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <OBJECT>
+                <ID name="" mc="Association" uid="647c1497-4e52-488f-a5c7-5915b248665f"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="listeAppareil" mc="AssociationEnd" uid="81e7ec20-ab88-4fb4-a7f7-e367705b746b"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[listeAppareil]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="297640f7-d3a3-42dc-ad58-ad007ca0c2e6"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="listeAppareil" mc="AssociationEnd" uid="81e7ec20-ab88-4fb4-a7f7-e367705b746b"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="510aa543-f220-41b8-b19a-b8e0160d195c"/>
+                      <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <OBJECT>
+                <ID name="" mc="Association" uid="510aa543-f220-41b8-b19a-b8e0160d195c"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>

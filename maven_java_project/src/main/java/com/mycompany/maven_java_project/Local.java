@@ -4,10 +4,22 @@
  */
 package com.mycompany.maven_java_project;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author 21204416
+ * @author Vincent
  */
 public class Local {
+    
+    // Attributes
+    String nomLocal;
+    ArrayList<Salle> listeSalle;
+
+    public Local(String nomLocal, ArrayList<Salle> listeSalle) {
+        this.nomLocal = nomLocal;
+        this.listeSalle = listeSalle;
+    }
+    
     
 }

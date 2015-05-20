@@ -110,7 +110,7 @@ public class Observer extends javax.swing.JFrame {
     public String afficherLocaux(String text) {
         // Obtenir la liste des locaux
         try {
-            Controleur bdd = new Controleur();
+            BDD bdd = new BDD();
             bdd.connect();
             bdd.select("SELECT nomLocal FROM Local");
             ResultSet res = bdd.getResults();
@@ -131,7 +131,7 @@ public class Observer extends javax.swing.JFrame {
     public String afficherSalles(String text) {
         // Obtenir la liste des salles
         try {
-            Controleur bdd = new Controleur();
+            BDD bdd = new BDD();
             bdd.connect();
             bdd.select("SELECT nomSalle FROM Salle");
             ResultSet res = bdd.getResults();
@@ -152,7 +152,7 @@ public class Observer extends javax.swing.JFrame {
     public String afficherAppareil(String text) {
         // Obtenir la liste des appareils
         try {
-            Controleur bdd = new Controleur();
+            BDD bdd = new BDD();
             bdd.connect();
             bdd.select("SELECT nomApp FROM Appareil");
             ResultSet res = bdd.getResults();

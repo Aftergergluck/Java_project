@@ -2,9 +2,9 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Appareil" version="3">
   <DEPS>
     <ID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+    <EXTID name="BDD" mc="Class" uid="cea9c290-4f40-49f5-88ad-0622fd3eea2e"/>
     <EXTID name="Carte_reseau" mc="Class" uid="67ba08e9-593a-458a-b286-c898e1da6bbd"/>
     <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
-    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
   </DEPS>
   <OBJECT>
@@ -58,47 +58,6 @@
                 <DEPENDENCIES>
                   <LINK relation="Type">
                     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="obtenirListeCartes" mc="Operation" uid="8ab2f251-238d-463c-bcde-4245cf3fff54"/>
-          <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[obtenirListeCartes]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="" mc="Parameter" uid="af8b0a19-1a91-4709-83df-174457e3d553"/>
-                <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <ID name="Carte_reseau" mc="Class" uid="67ba08e9-593a-458a-b286-c898e1da6bbd"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -183,31 +142,6 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="listInterface" mc="Attribute" uid="40a193f7-6665-4ce1-abab-bdfb4aeaec0f"/>
-          <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
-          <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"></ATT>
-            <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[listInterface]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="typeApp" mc="Attribute" uid="67aa81eb-993a-4246-b0c3-511df91e97a4"/>
           <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
           <ATTRIBUTES>
@@ -260,7 +194,7 @@
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="liste_carte_reseau" mc="AssociationEnd" uid="33e40504-117b-4ec4-a323-77696fc1d448"/>
+          <ID name="listeCarteReseau" mc="AssociationEnd" uid="33e40504-117b-4ec4-a323-77696fc1d448"/>
           <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
@@ -274,7 +208,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[liste_carte_reseau]]></ATT>
+            <ATT name="Name"><![CDATA[listeCarteReseau]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -302,7 +236,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="liste_carte_reseau" mc="AssociationEnd" uid="33e40504-117b-4ec4-a323-77696fc1d448"/>
+                    <COMPID name="listeCarteReseau" mc="AssociationEnd" uid="33e40504-117b-4ec4-a323-77696fc1d448"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
@@ -321,6 +255,78 @@
             <COMP relation="Association">
               <OBJECT>
                 <ID name="" mc="Association" uid="7e84ba03-0f70-464f-a404-0d8ca187a96a"/>
+                <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="bDD" mc="AssociationEnd" uid="04e2f947-f560-4988-80ab-53b042cab8bb"/>
+          <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[bDD]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="BDD" mc="Class" uid="cea9c290-4f40-49f5-88ad-0622fd3eea2e"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="2dc4e55d-363b-4909-aa73-9268b482e83c"/>
+                <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="bDD" mc="AssociationEnd" uid="04e2f947-f560-4988-80ab-53b042cab8bb"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="6ee0aa98-8ea9-4e8b-b1ee-2e30b0ec0e73"/>
+                      <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <OBJECT>
+                <ID name="" mc="Association" uid="6ee0aa98-8ea9-4e8b-b1ee-2e30b0ec0e73"/>
                 <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

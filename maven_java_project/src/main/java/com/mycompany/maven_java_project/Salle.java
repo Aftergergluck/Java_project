@@ -4,10 +4,25 @@
  */
 package com.mycompany.maven_java_project;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author 21204416
+ * @author Vincent
  */
 public class Salle {
+    
+    // Attributes
+    String nomSalle;
+    ArrayList<Appareil> listeApp;
+    String emp;
+    int capa;
+
+    public Salle(String nomSalle, ArrayList<Appareil> listeApp, String emp, int capa) {
+        this.nomSalle = nomSalle;
+        this.listeApp = listeApp;
+        this.emp = emp;
+        this.capa = capa;
+    }
     
 }

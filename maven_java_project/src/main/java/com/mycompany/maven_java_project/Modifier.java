@@ -14,7 +14,7 @@ import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 
 /**
- *Modification d'un composant dans la Controleur
+ *Modification d'un composant dans la BDD
  * @author Florian
  */
 public class Modifier extends javax.swing.JFrame {
@@ -442,7 +442,7 @@ public class Modifier extends javax.swing.JFrame {
     private ComboBoxModel getComboBoxModelApp(){
    try {
             // TODO add your handling code here:
-            Controleur bd = new Controleur();
+            BDD bd = new BDD();
             bd.connect();
             bd.select("SELECT nomLocal FROM Local");
             ResultSet resultatsL = bd.getResults();
