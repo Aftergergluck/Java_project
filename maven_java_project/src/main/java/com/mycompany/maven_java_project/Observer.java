@@ -40,7 +40,6 @@ public class Observer extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Observation du réseau");
@@ -51,35 +50,27 @@ public class Observer extends javax.swing.JFrame {
         jLabel2.setText(observerReseauLabel());
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jLabel3.setText("jLabel3");
-        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addGap(104, 104, 104)
+                .addComponent(jLabel1)
+                .addContainerGap(172, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
@@ -203,13 +194,21 @@ public class Observer extends javax.swing.JFrame {
                 req = "SELECT nomSalle FROM Salle WHERE lieuSalle = '" +locaux[cptl]+"';";
                 bd.select(req);
                 ResultSet resultS = bd.getResults();
+                bd.select("Select COUNT(nomSalle) From Salle Where lieuSalle = '" +resultatsL.getString(1)+"'");
+                ResultSet count = bd.getResults();
+                count.next();
+                int nb = count.getInt(1);
                 Salle[cptS] = locaux[cptl];
                 cptS++;
-                chaine += "<br><b>"+locaux[cptl]+"</b><br>";
+                chaine += "<br><b>"+locaux[cptl]+"     (Nombre de Salle = "+nb+"  )</b><br>";
                 while(resultS.next()){
                     Salle[cptS] = resultS.getString(1);
-                    chaine +="&nbsp;&nbsp;&nbsp;&nbsp;<i>"+ Salle[cptS]+"</i><br>";
-                    req = "SELECT nomapp From Appareil WHERE lieuappareil = '" +Salle[cptS]+"' AND active = 'true';";
+                    bd.select("Select COUNT(nomapp) From Appareil Where lieuappareil = '" +resultS.getString(1)+"' and active='true';");
+                    count = bd.getResults();
+                    count.next();
+                    nb = count.getInt(1);
+                    chaine +="&nbsp;&nbsp;&nbsp;&nbsp;<i>"+ Salle[cptS]+"     (Nombre d'appareils actifs = " +nb+"  )</i><br>";
+                    req = "SELECT * From Appareil WHERE lieuappareil = '" +Salle[cptS]+"' AND active = 'true';";
                     Salle[cptS] = "     ".concat(Salle[cptS]);
                     bd.select(req);
                     ResultSet resultA = bd.getResults();
@@ -220,10 +219,23 @@ public class Observer extends javax.swing.JFrame {
                     cptS++;
                     while(resultA.next()){
                         App[cptA] = "         ".concat(resultA.getString(1));
-                        chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ App[cptA]+ "<br>";
+                        bd.select("SELECT adrmacappareil FROM carte_reseau WHERE nomapp = '" +resultA.getString(1)+ "';");
+                        ResultSet adr = bd.getResults();
+                        String adrMac = "";
+                        while(adr.next()){
+                            adrMac = adr.getString(1);
+                        }
+                        if("     Routeur".equals(resultA.getString(2)))
+                        {
+                            chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ App[cptA]+ " &nbsp;&nbsp;&nbsp;&nbsp;(Type = " +resultA.getString(2)+";   @MAC = "+adrMac+";   Firmware = " +resultA.getString(4)+")<br>";                            
+                        }
+                        else{
+                            chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ App[cptA]+ " &nbsp;&nbsp;&nbsp;&nbsp;(Type = " +resultA.getString(2)+";   @MAC = " +adrMac +";   OS = " +resultA.getString(3)+ ";   Firmware = " +resultA.getString(4)+")<br>";                            
+                        }
                         cptA++;
+                        
                     }
-                    
+                    chaine += "<br>";
                 }
                 cptl++;
             }
@@ -243,6 +255,5 @@ public class Observer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }
