@@ -28,6 +28,7 @@
           <PID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -42,6 +43,7 @@
           <PID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -56,6 +58,7 @@
           <PID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -70,6 +73,7 @@
           <PID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -84,6 +88,7 @@
           <PID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -98,6 +103,7 @@
           <PID name="Affecter connexion à un appareil" mc="UseCase" uid="cbf3a440-862e-493c-a8f0-47bf60a32f9a"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>

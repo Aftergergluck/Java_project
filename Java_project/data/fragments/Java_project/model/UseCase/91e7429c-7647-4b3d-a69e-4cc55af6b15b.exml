@@ -116,6 +116,7 @@
           <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -130,6 +131,7 @@
           <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -144,6 +146,7 @@
           <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -158,6 +161,7 @@
           <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -172,6 +176,7 @@
           <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -186,6 +191,7 @@
           <PID name="Décrire un appareil" mc="UseCase" uid="91e7429c-7647-4b3d-a69e-4cc55af6b15b"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>

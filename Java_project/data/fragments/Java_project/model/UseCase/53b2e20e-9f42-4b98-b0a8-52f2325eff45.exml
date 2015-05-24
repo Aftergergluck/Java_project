@@ -28,6 +28,7 @@
           <PID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -42,6 +43,7 @@
           <PID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -56,6 +58,7 @@
           <PID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -70,6 +73,7 @@
           <PID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -84,6 +88,7 @@
           <PID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
@@ -98,6 +103,7 @@
           <PID name="Affecter adresse MAC" mc="UseCase" uid="53b2e20e-9f42-4b98-b0a8-52f2325eff45"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
+            <ATT name="MimeType"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>

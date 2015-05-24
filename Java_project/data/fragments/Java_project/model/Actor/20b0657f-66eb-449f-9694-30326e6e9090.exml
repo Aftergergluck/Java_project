@@ -89,15 +89,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="772ec9d6-9d42-479f-9047-5a331ef70339"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="772ec9d6-9d42-479f-9047-5a331ef70339"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -161,15 +153,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="f05c4cbf-7e8f-4c82-96c6-e55d444e5194"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="f05c4cbf-7e8f-4c82-96c6-e55d444e5194"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -233,15 +217,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="bc0252af-614d-4f28-854c-35fc0c6c4cdb"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="bc0252af-614d-4f28-854c-35fc0c6c4cdb"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -305,15 +281,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="3291bfcf-b0c3-4cd6-bb05-6a77ccbe1462"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="3291bfcf-b0c3-4cd6-bb05-6a77ccbe1462"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -377,15 +345,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="cae06d15-d777-4ca8-8700-397e9074d491"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="cae06d15-d777-4ca8-8700-397e9074d491"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -449,15 +409,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="0a50e81e-7407-441f-8f91-ad9325ac54ff"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="0a50e81e-7407-441f-8f91-ad9325ac54ff"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -521,15 +473,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="bb64f9de-2201-44e4-b53d-cda12e07b755"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="bb64f9de-2201-44e4-b53d-cda12e07b755"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -593,15 +537,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="57d5aaf1-85b5-4b6b-a3b3-3e76eea261f1"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="57d5aaf1-85b5-4b6b-a3b3-3e76eea261f1"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -665,15 +601,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="56ec8edb-ae49-4af5-97ec-4a9cdea6a6fd"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="56ec8edb-ae49-4af5-97ec-4a9cdea6a6fd"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -737,15 +665,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="dd8aa5d5-cfa4-4612-90fd-c8106b6e29c6"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="dd8aa5d5-cfa4-4612-90fd-c8106b6e29c6"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -809,15 +729,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="e20d4a2e-f24a-41bf-951a-3942767d1586"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="e20d4a2e-f24a-41bf-951a-3942767d1586"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -881,15 +793,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="137dd64d-ac20-4c1f-b92e-53ef104e8908"/>
-                <PID name="Utilisateur" mc="Actor" uid="20b0657f-66eb-449f-9694-30326e6e9090"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="137dd64d-ac20-4c1f-b92e-53ef104e8908"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
