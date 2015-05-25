@@ -28,45 +28,45 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        buttonGroup = new javax.swing.ButtonGroup();
+        jLabelMenu = new javax.swing.JLabel();
+        jRadioButtonAdd = new javax.swing.JRadioButton();
+        jRadioButtonModif = new javax.swing.JRadioButton();
+        jRadioButtonObs = new javax.swing.JRadioButton();
+        jButtonValider = new javax.swing.JButton();
+        jButtonQuitter = new javax.swing.JButton();
+        jLabelName = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestion de Réseau - STRI");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("Menu Principal");
+        jLabelMenu.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabelMenu.setText("Menu Principal");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Ajouter");
+        buttonGroup.add(jRadioButtonAdd);
+        jRadioButtonAdd.setText("Ajouter");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Modifier");
+        buttonGroup.add(jRadioButtonModif);
+        jRadioButtonModif.setText("Modifier");
 
-        buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Observer le réseau");
+        buttonGroup.add(jRadioButtonObs);
+        jRadioButtonObs.setText("Observer le réseau");
 
-        jButton1.setText("Valider");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonValider.setText("Valider");
+        jButtonValider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonValiderActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Quitter");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonQuitter.setText("Quitter");
+        jButtonQuitter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonQuitterActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("BADENS - BANQUET - GUENAT - SAYEGH");
+        jLabelName.setText("BADENS - BANQUET - GUENAT - SAYEGH");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,52 +76,52 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2))
+                        .addComponent(jLabelName))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(155, 155, 155)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabelMenu)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(91, 91, 91)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonQuitter, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jRadioButtonObs)
+                    .addComponent(jRadioButtonAdd, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonModif, javax.swing.GroupLayout.Alignment.LEADING))
                 .addGap(185, 185, 185))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
-                .addComponent(jLabel1)
+                .addComponent(jLabelMenu)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton1)
+                .addComponent(jRadioButtonAdd)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
+                .addComponent(jRadioButtonModif)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton3)
+                .addComponent(jRadioButtonObs)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonValider, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonQuitter, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
-                .addComponent(jLabel2)
+                .addComponent(jLabelName)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonValiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValiderActionPerformed
                 // TODO add your handling code here:
         String value = "ss";   
-        for (Enumeration <AbstractButton> buttons = buttonGroup1.getElements(); buttons.hasMoreElements();) {
+        for (Enumeration <AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
 
             if (button.isSelected()) {
@@ -149,12 +149,12 @@ public class Principal extends javax.swing.JFrame {
             this.setVisible(false);
             obs.setVisible(true);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonValiderActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonQuitterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuitterActionPerformed
         // TODO add your handling code here:
         System.exit(0); 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonQuitterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,13 +194,13 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroup1;
-    public javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.ButtonGroup buttonGroup;
+    private javax.swing.JButton jButtonQuitter;
+    public javax.swing.JButton jButtonValider;
+    private javax.swing.JLabel jLabelMenu;
+    private javax.swing.JLabel jLabelName;
+    private javax.swing.JRadioButton jRadioButtonAdd;
+    private javax.swing.JRadioButton jRadioButtonModif;
+    private javax.swing.JRadioButton jRadioButtonObs;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,99 +35,99 @@ public class Ajouter extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jLabelAjouter = new javax.swing.JLabel();
+        jComboBoxSelection = new javax.swing.JComboBox();
+        jButtonValidSelect = new javax.swing.JButton();
+        jLabelSelect = new javax.swing.JLabel();
+        jPanelPrincipal = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanelOrdi = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jLabelAddOrdi = new javax.swing.JLabel();
+        jLabelNameOrdi = new javax.swing.JLabel();
+        jLabelMacOrdi = new javax.swing.JLabel();
+        jLabelEmplacementOrdi = new javax.swing.JLabel();
+        jLabelOsOrdi = new javax.swing.JLabel();
+        jLabelActiveOrdi = new javax.swing.JLabel();
+        jTextFieldNameOrdi = new javax.swing.JTextField();
+        jTextFieldMacOrdi = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jComboBox5 = new javax.swing.JComboBox();
-        jLabel32 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jComboBox6 = new javax.swing.JComboBox();
-        jComboBox8 = new javax.swing.JComboBox();
+        jButtonValidOrdi = new javax.swing.JButton();
+        jComboBoxOsOrdi = new javax.swing.JComboBox();
+        jLabelFirmwareOrdi = new javax.swing.JLabel();
+        jTextFieldFirmOrdi = new javax.swing.JTextField();
+        jComboBoxEmplacement = new javax.swing.JComboBox();
+        jComboBoxActive = new javax.swing.JComboBox();
         jPanelTablette = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        jLabelAddTab = new javax.swing.JLabel();
+        jButtonValidTab = new javax.swing.JButton();
+        jLabelNameTab = new javax.swing.JLabel();
+        jLabelMacTab = new javax.swing.JLabel();
+        jLabelEmplacementTab = new javax.swing.JLabel();
+        jLabelOsTab = new javax.swing.JLabel();
+        jLabelActiveTab = new javax.swing.JLabel();
+        jTextFieldNameTab = new javax.swing.JTextField();
+        jTextFieldMacTab = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox();
-        jComboBox4 = new javax.swing.JComboBox();
-        jLabel16 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jComboBox9 = new javax.swing.JComboBox();
+        jComboBoxOsTab = new javax.swing.JComboBox();
+        jComboBoxEmplacementTab = new javax.swing.JComboBox();
+        jLabelFirmTab = new javax.swing.JLabel();
+        jTextFieldFirmTab = new javax.swing.JTextField();
+        jComboBoxActiveTab = new javax.swing.JComboBox();
         jPanelRouteur = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        jLabelAddRouteur = new javax.swing.JLabel();
+        jLabelNameRouteur = new javax.swing.JLabel();
+        jLabelMacRouteur = new javax.swing.JLabel();
+        jLabelEmplacementRouteur = new javax.swing.JLabel();
+        jLabelActiveRouteur = new javax.swing.JLabel();
+        jTextFieldNameRouteur = new javax.swing.JTextField();
+        jTextFieldMacRouteur = new javax.swing.JTextField();
+        jButtonValidRouteur = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox();
-        jLabel33 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jComboBox10 = new javax.swing.JComboBox();
+        jComboBoxEmplacementRouteur = new javax.swing.JComboBox();
+        jLabelFirmRouteur = new javax.swing.JLabel();
+        jTextFieldFirmRouteur = new javax.swing.JTextField();
+        jComboBoxActiveRouteur = new javax.swing.JComboBox();
         jPanelLocal = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jTextFieldNL = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
-        jLabel30 = new javax.swing.JLabel();
-        jTextFieldAL = new javax.swing.JTextField();
-        jLabel31 = new javax.swing.JLabel();
-        jSpinnerNBS = new javax.swing.JSpinner();
+        jLabelAddLocal = new javax.swing.JLabel();
+        jLabelNameLocal = new javax.swing.JLabel();
+        jTextFieldNameLocal = new javax.swing.JTextField();
+        jButtonValidLocal = new javax.swing.JButton();
+        jLabelAdresseLocal = new javax.swing.JLabel();
+        jTextFieldAdresseLocal = new javax.swing.JTextField();
+        jLabelNbSalleLocal = new javax.swing.JLabel();
+        jSpinnerNbSalleLocal = new javax.swing.JSpinner();
         jPanelSalle = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jTextField15 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox();
+        jLabelAddSalle = new javax.swing.JLabel();
+        jLabelNameSalle = new javax.swing.JLabel();
+        jLabelEmplacementSalle = new javax.swing.JLabel();
+        jTextFieldNameSalle = new javax.swing.JTextField();
+        jButtonValidSalle = new javax.swing.JButton();
+        jComboBoxEmplacementSalle = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ajouter un équipement");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("Ajouter ");
+        jLabelAjouter.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabelAjouter.setText("Ajouter ");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Local", "Salle", "Equipement", "     Ordinateur", "     Tablette", "     Routeur" }));
-        jComboBox1.setToolTipText("Sélectionner...");
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxSelection.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Local", "Salle", "Equipement", "     Ordinateur", "     Tablette", "     Routeur" }));
+        jComboBoxSelection.setToolTipText("Sélectionner...");
+        jComboBoxSelection.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBoxSelectionActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Valider");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonValidSelect.setText("Valider");
+        jButtonValidSelect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonValidSelectActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Sélectionner ce que vous voulez ajouter...");
+        jLabelSelect.setText("Sélectionner ce que vous voulez ajouter...");
 
-        jPanel1.setLayout(new java.awt.CardLayout());
+        jPanelPrincipal.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -140,36 +140,36 @@ public class Ajouter extends javax.swing.JFrame {
             .addGap(0, 401, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel2, "card5");
+        jPanelPrincipal.add(jPanel2, "card5");
 
         jPanelOrdi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel4.setText("Ajouter un Ordinateur");
+        jLabelAddOrdi.setText("Ajouter un Ordinateur");
 
-        jLabel6.setText("Nom de l'ordinateur :");
+        jLabelNameOrdi.setText("Nom de l'ordinateur :");
 
-        jLabel7.setText("Adresse MAC :");
+        jLabelMacOrdi.setText("Adresse MAC :");
 
-        jLabel8.setText("Emplacement :");
+        jLabelEmplacementOrdi.setText("Emplacement :");
 
-        jLabel9.setText("Système d'exploitation :");
+        jLabelOsOrdi.setText("Système d'exploitation :");
 
-        jLabel11.setText("Activer / Désactiver :");
+        jLabelActiveOrdi.setText("Activer / Désactiver :");
 
-        jButton3.setText("Valider");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonValidOrdi.setText("Valider");
+        jButtonValidOrdi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonValidOrdiActionPerformed(evt);
             }
         });
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Windows 7", "Windows 8", "Linux", "Mac" }));
+        jComboBoxOsOrdi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Windows 7", "Windows 8", "Linux", "Mac" }));
 
-        jLabel32.setText("Nom du firmware :");
+        jLabelFirmwareOrdi.setText("Nom du firmware :");
 
-        jComboBox6.setModel(getComboBoxModelSalle());
+        jComboBoxEmplacement.setModel(getComboBoxModelSalle());
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "true", "false" }));
+        jComboBoxActive.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "true", "false" }));
 
         javax.swing.GroupLayout jPanelOrdiLayout = new javax.swing.GroupLayout(jPanelOrdi);
         jPanelOrdi.setLayout(jPanelOrdiLayout);
@@ -177,40 +177,41 @@ public class Ajouter extends javax.swing.JFrame {
             jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelOrdiLayout.createSequentialGroup()
                 .addGap(210, 210, 210)
-                .addComponent(jLabel4)
+                .addComponent(jLabelAddOrdi)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelOrdiLayout.createSequentialGroup()
                 .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanelOrdiLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3))
+                        .addComponent(jButtonValidOrdi))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelOrdiLayout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelOrdiLayout.createSequentialGroup()
                                     .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel7)
-                                        .addComponent(jLabel6))
+                                        .addComponent(jLabelMacOrdi)
+                                        .addComponent(jLabelNameOrdi))
                                     .addGap(122, 122, 122))
-                                .addComponent(jLabel8))
+                                .addComponent(jLabelEmplacementOrdi))
                             .addGroup(jPanelOrdiLayout.createSequentialGroup()
-                                .addComponent(jLabel32)
-                                .addGap(134, 134, 134))
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel11))
+                                .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelFirmwareOrdi)
+                                    .addComponent(jLabelOsOrdi)
+                                    .addComponent(jLabelActiveOrdi))
+                                .addGap(107, 107, 107)))
                         .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelOrdiLayout.createSequentialGroup()
                                 .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jComboBox5, javax.swing.GroupLayout.Alignment.LEADING, 0, 100, Short.MAX_VALUE)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox6, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jComboBoxOsOrdi, javax.swing.GroupLayout.Alignment.LEADING, 0, 100, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldNameOrdi, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldMacOrdi, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBoxEmplacement, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(79, 79, 79)
                                 .addComponent(jLabel13))
                             .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jComboBox8, javax.swing.GroupLayout.Alignment.LEADING, 0, 100, Short.MAX_VALUE)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)))))
+                                .addComponent(jComboBoxActive, javax.swing.GroupLayout.Alignment.LEADING, 0, 100, Short.MAX_VALUE)
+                                .addComponent(jTextFieldFirmOrdi, javax.swing.GroupLayout.Alignment.LEADING)))))
                 .addGap(41, 41, 41))
         );
         jPanelOrdiLayout.setVerticalGroup(
@@ -222,69 +223,69 @@ public class Ajouter extends javax.swing.JFrame {
                             .addGroup(jPanelOrdiLayout.createSequentialGroup()
                                 .addGap(86, 86, 86)
                                 .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabelNameOrdi)
+                                    .addComponent(jTextFieldNameOrdi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabelMacOrdi)
+                                    .addComponent(jTextFieldMacOrdi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabelEmplacementOrdi)
+                                    .addComponent(jComboBoxEmplacement, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanelOrdiLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel4)
+                                .addComponent(jLabelAddOrdi)
                                 .addGap(106, 106, 106)
                                 .addComponent(jLabel13)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                         .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelOsOrdi)
+                            .addComponent(jComboBoxOsOrdi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanelOrdiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelFirmwareOrdi, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTextFieldFirmOrdi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(14, 14, 14)
-                        .addComponent(jLabel11))
+                        .addComponent(jLabelActiveOrdi))
                     .addGroup(jPanelOrdiLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jComboBoxActive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(91, 91, 91)
-                .addComponent(jButton3)
+                .addComponent(jButtonValidOrdi)
                 .addGap(24, 24, 24))
         );
 
-        jPanel1.add(jPanelOrdi, "ordi");
+        jPanelPrincipal.add(jPanelOrdi, "ordi");
 
         jPanelTablette.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel3.setText("Ajouter une tablette");
+        jLabelAddTab.setText("Ajouter une tablette");
 
-        jButton2.setText("Valider");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonValidTab.setText("Valider");
+        jButtonValidTab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonValidTabActionPerformed(evt);
             }
         });
 
-        jLabel10.setText("Nom de la tablette :");
+        jLabelNameTab.setText("Nom de la tablette :");
 
-        jLabel12.setText("Adresse MAC :");
+        jLabelMacTab.setText("Adresse MAC :");
 
-        jLabel14.setText("Emplacement :");
+        jLabelEmplacementTab.setText("Emplacement :");
 
-        jLabel15.setText("Système d'exploitation :");
+        jLabelOsTab.setText("Système d'exploitation :");
 
-        jLabel17.setText("Activer / Désactiver :");
+        jLabelActiveTab.setText("Activer / Désactiver :");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Android", "iOS", "Windows" }));
+        jComboBoxOsTab.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Android", "iOS", "Windows" }));
 
-        jComboBox4.setModel(getComboBoxModelSalle());
+        jComboBoxEmplacementTab.setModel(getComboBoxModelSalle());
 
-        jLabel16.setText("Nom du firmware :");
+        jLabelFirmTab.setText("Nom du firmware :");
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "true", "false" }));
+        jComboBoxActiveTab.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "true", "false" }));
 
         javax.swing.GroupLayout jPanelTabletteLayout = new javax.swing.GroupLayout(jPanelTablette);
         jPanelTablette.setLayout(jPanelTabletteLayout);
@@ -294,44 +295,44 @@ public class Ajouter extends javax.swing.JFrame {
                 .addGroup(jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelTabletteLayout.createSequentialGroup()
                         .addGap(193, 193, 193)
-                        .addComponent(jLabel3))
+                        .addComponent(jLabelAddTab))
                     .addGroup(jPanelTabletteLayout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addGroup(jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel12))
+                            .addComponent(jLabelActiveTab)
+                            .addComponent(jLabelOsTab)
+                            .addComponent(jLabelFirmTab)
+                            .addComponent(jLabelEmplacementTab)
+                            .addComponent(jLabelNameTab)
+                            .addComponent(jLabelMacTab))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                         .addGroup(jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelTabletteLayout.createSequentialGroup()
                                         .addGap(2, 2, 2)
-                                        .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jComboBoxEmplacementTab, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jTextFieldMacTab, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldNameTab, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanelTabletteLayout.createSequentialGroup()
                                     .addGap(2, 2, 2)
                                     .addGroup(jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jComboBox9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTextFieldFirmTab, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBoxOsTab, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jComboBoxActiveTab, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(134, 134, 134)
                         .addComponent(jLabel18)))
                 .addContainerGap(34, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTabletteLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(jButtonValidTab)
                 .addGap(92, 92, 92))
         );
         jPanelTabletteLayout.setVerticalGroup(
             jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelTabletteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
+                .addComponent(jLabelAddTab)
                 .addGap(64, 64, 64)
                 .addGroup(jPanelTabletteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelTabletteLayout.createSequentialGroup()
@@ -339,61 +340,61 @@ public class Ajouter extends javax.swing.JFrame {
                             .addComponent(jLabel18)
                             .addGroup(jPanelTabletteLayout.createSequentialGroup()
                                 .addGap(7, 7, 7)
-                                .addComponent(jLabel10)
+                                .addComponent(jLabelNameTab)
                                 .addGap(11, 11, 11)
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabelMacTab, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel14)))
+                                .addComponent(jLabelEmplacementTab)))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel15)
+                        .addComponent(jLabelOsTab)
                         .addGap(20, 20, 20)
-                        .addComponent(jLabel16)
+                        .addComponent(jLabelFirmTab)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel17)
+                        .addComponent(jLabelActiveTab)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addComponent(jButtonValidTab)
                         .addGap(76, 76, 76))
                     .addGroup(jPanelTabletteLayout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldNameTab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldMacTab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxEmplacementTab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxOsTab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextFieldFirmTab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxActiveTab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jPanel1.add(jPanelTablette, "tablette");
+        jPanelPrincipal.add(jPanelTablette, "tablette");
 
         jPanelRouteur.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel5.setText("Ajouter un routeur");
+        jLabelAddRouteur.setText("Ajouter un routeur");
 
-        jLabel19.setText("Nom du routeur :");
+        jLabelNameRouteur.setText("Nom du routeur :");
 
-        jLabel20.setText("Adresse MAC :");
+        jLabelMacRouteur.setText("Adresse MAC :");
 
-        jLabel21.setText("Emplacement :");
+        jLabelEmplacementRouteur.setText("Emplacement :");
 
-        jLabel23.setText("Activer / Désactiver :");
+        jLabelActiveRouteur.setText("Activer / Désactiver :");
 
-        jButton4.setText("Valider");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jButtonValidRouteur.setText("Valider");
+        jButtonValidRouteur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButtonValidRouteurActionPerformed(evt);
             }
         });
 
-        jComboBox7.setModel(getComboBoxModelSalle());
+        jComboBoxEmplacementRouteur.setModel(getComboBoxModelSalle());
 
-        jLabel33.setText("Nom du firmware :");
+        jLabelFirmRouteur.setText("Nom du firmware :");
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "true", "false" }));
+        jComboBoxActiveRouteur.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "true", "false" }));
 
         javax.swing.GroupLayout jPanelRouteurLayout = new javax.swing.GroupLayout(jPanelRouteur);
         jPanelRouteur.setLayout(jPanelRouteurLayout);
@@ -403,30 +404,30 @@ public class Ajouter extends javax.swing.JFrame {
                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelRouteurLayout.createSequentialGroup()
                         .addGap(153, 153, 153)
-                        .addComponent(jLabel5))
+                        .addComponent(jLabelAddRouteur))
                     .addGroup(jPanelRouteurLayout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel33)
+                            .addComponent(jLabelFirmRouteur)
                             .addGroup(jPanelRouteurLayout.createSequentialGroup()
                                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel19)
-                                    .addComponent(jLabel20)
-                                    .addComponent(jLabel21)
-                                    .addComponent(jLabel23))
+                                    .addComponent(jLabelNameRouteur)
+                                    .addComponent(jLabelMacRouteur)
+                                    .addComponent(jLabelEmplacementRouteur)
+                                    .addComponent(jLabelActiveRouteur))
                                 .addGap(93, 93, 93)
                                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField7)
-                                    .addComponent(jComboBox7, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField10)
-                                    .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(jComboBox10, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(jTextFieldFirmRouteur)
+                                    .addComponent(jComboBoxEmplacementRouteur, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldNameRouteur)
+                                    .addComponent(jTextFieldMacRouteur, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxActiveRouteur, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRouteurLayout.createSequentialGroup()
                 .addGap(256, 450, Short.MAX_VALUE)
                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRouteurLayout.createSequentialGroup()
-                        .addComponent(jButton4)
+                        .addComponent(jButtonValidRouteur)
                         .addGap(49, 49, 49))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRouteurLayout.createSequentialGroup()
                         .addComponent(jLabel24)
@@ -436,52 +437,52 @@ public class Ajouter extends javax.swing.JFrame {
             jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelRouteurLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5)
+                .addComponent(jLabelAddRouteur)
                 .addGap(75, 75, 75)
                 .addComponent(jLabel24)
                 .addGap(17, 17, 17)
                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelNameRouteur)
+                    .addComponent(jTextFieldNameRouteur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelMacRouteur)
+                    .addComponent(jTextFieldMacRouteur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEmplacementRouteur)
+                    .addComponent(jComboBoxEmplacementRouteur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelFirmRouteur)
+                    .addComponent(jTextFieldFirmRouteur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelRouteurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelActiveRouteur)
+                    .addComponent(jComboBoxActiveRouteur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(87, 87, 87)
-                .addComponent(jButton4)
+                .addComponent(jButtonValidRouteur)
                 .addGap(38, 38, 38))
         );
 
-        jPanel1.add(jPanelRouteur, "routeur");
+        jPanelPrincipal.add(jPanelRouteur, "routeur");
 
         jPanelLocal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel25.setText("Ajouter un local");
+        jLabelAddLocal.setText("Ajouter un local");
 
-        jLabel26.setText("Nom du local :");
+        jLabelNameLocal.setText("Nom du local :");
 
-        jButton5.setText("Valider");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        jButtonValidLocal.setText("Valider");
+        jButtonValidLocal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                jButtonValidLocalActionPerformed(evt);
             }
         });
 
-        jLabel30.setText("Adresse du local :");
+        jLabelAdresseLocal.setText("Adresse du local :");
 
-        jLabel31.setText("Nombre de salle(s) :");
+        jLabelNbSalleLocal.setText("Nombre de salle(s) :");
 
         javax.swing.GroupLayout jPanelLocalLayout = new javax.swing.GroupLayout(jPanelLocal);
         jPanelLocal.setLayout(jPanelLocalLayout);
@@ -491,72 +492,72 @@ public class Ajouter extends javax.swing.JFrame {
                 .addGroup(jPanelLocalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelLocalLayout.createSequentialGroup()
                         .addGap(217, 217, 217)
-                        .addComponent(jLabel25))
+                        .addComponent(jLabelAddLocal))
                     .addGroup(jPanelLocalLayout.createSequentialGroup()
                         .addGap(59, 59, 59)
                         .addGroup(jPanelLocalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel31))
+                            .addComponent(jLabelNameLocal)
+                            .addComponent(jLabelAdresseLocal)
+                            .addComponent(jLabelNbSalleLocal))
                         .addGap(177, 177, 177)
                         .addGroup(jPanelLocalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldNL, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                            .addComponent(jTextFieldAL)
+                            .addComponent(jTextFieldNameLocal, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(jTextFieldAdresseLocal)
                             .addGroup(jPanelLocalLayout.createSequentialGroup()
                                 .addGap(25, 25, 25)
-                                .addComponent(jSpinnerNBS, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jSpinnerNbSalleLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(132, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelLocalLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton5)
+                .addComponent(jButtonValidLocal)
                 .addGap(91, 91, 91))
         );
         jPanelLocalLayout.setVerticalGroup(
             jPanelLocalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelLocalLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel25)
+                .addComponent(jLabelAddLocal)
                 .addGap(55, 55, 55)
                 .addGroup(jPanelLocalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(jTextFieldNL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelNameLocal)
+                    .addComponent(jTextFieldNameLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelLocalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
-                    .addComponent(jTextFieldAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelAdresseLocal)
+                    .addComponent(jTextFieldAdresseLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelLocalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(jSpinnerNBS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelNbSalleLocal)
+                    .addComponent(jSpinnerNbSalleLocal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
-                .addComponent(jButton5)
+                .addComponent(jButtonValidLocal)
                 .addGap(81, 81, 81))
         );
 
-        jPanel1.add(jPanelLocal, "local");
+        jPanelPrincipal.add(jPanelLocal, "local");
 
         jPanelSalle.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel27.setText("Ajouter une salle");
+        jLabelAddSalle.setText("Ajouter une salle");
 
-        jLabel28.setText("Nom de la salle :");
+        jLabelNameSalle.setText("Nom de la salle :");
 
-        jLabel29.setText("Emplacement :");
+        jLabelEmplacementSalle.setText("Emplacement :");
 
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldNameSalle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                jTextFieldNameSalleActionPerformed(evt);
             }
         });
 
-        jButton6.setText("Valider");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jButtonValidSalle.setText("Valider");
+        jButtonValidSalle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jButtonValidSalleActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(getComboBoxModelLocal());
+        jComboBoxEmplacementSalle.setModel(getComboBoxModelLocal());
 
         javax.swing.GroupLayout jPanelSalleLayout = new javax.swing.GroupLayout(jPanelSalle);
         jPanelSalle.setLayout(jPanelSalleLayout);
@@ -564,43 +565,43 @@ public class Ajouter extends javax.swing.JFrame {
             jPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelSalleLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(jButtonValidSalle)
                 .addGap(73, 73, 73))
             .addGroup(jPanelSalleLayout.createSequentialGroup()
                 .addGroup(jPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelSalleLayout.createSequentialGroup()
                         .addGap(218, 218, 218)
-                        .addComponent(jLabel27))
+                        .addComponent(jLabelAddSalle))
                     .addGroup(jPanelSalleLayout.createSequentialGroup()
                         .addGap(115, 115, 115)
                         .addGroup(jPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel28)
-                            .addComponent(jLabel29))
+                            .addComponent(jLabelNameSalle)
+                            .addComponent(jLabelEmplacementSalle))
                         .addGap(128, 128, 128)
                         .addGroup(jPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField15)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldNameSalle)
+                            .addComponent(jComboBoxEmplacementSalle, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(143, Short.MAX_VALUE))
         );
         jPanelSalleLayout.setVerticalGroup(
             jPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSalleLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel27)
+                .addComponent(jLabelAddSalle)
                 .addGap(86, 86, 86)
                 .addGroup(jPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel28)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelNameSalle)
+                    .addComponent(jTextFieldNameSalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelSalleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabelEmplacementSalle)
+                    .addComponent(jComboBoxEmplacementSalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(jButtonValidSalle)
                 .addGap(65, 65, 65))
         );
 
-        jPanel1.add(jPanelSalle, "salle");
+        jPanelPrincipal.add(jPanelSalle, "salle");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -612,45 +613,45 @@ public class Ajouter extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(119, 119, 119)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxSelection, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(79, 79, 79)
-                                .addComponent(jButton1))
+                                .addComponent(jButtonValidSelect))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(90, 90, 90)
-                                .addComponent(jLabel2))
+                                .addComponent(jLabelSelect))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(229, 229, 229)
-                                .addComponent(jLabel1)))
+                                .addComponent(jLabelAjouter)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel1)
+                .addComponent(jLabelAjouter)
                 .addGap(31, 31, 31)
-                .addComponent(jLabel2)
+                .addComponent(jLabelSelect)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(jComboBoxSelection, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonValidSelect))
                 .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jComboBox1.getAccessibleContext().setAccessibleName("Sélectionner");
+        jComboBoxSelection.getAccessibleContext().setAccessibleName("Sélectionner");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBoxSelectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxSelectionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBoxSelectionActionPerformed
 
     
     /** Fonction d'affichage dans le ComboBox principal pour choisir ce que l'on veut ajouter
@@ -660,49 +661,49 @@ public class Ajouter extends javax.swing.JFrame {
      * @author Florian
      * @param evt 
      */
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonValidSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidSelectActionPerformed
         // TODO add your handling code here:
         String valueBox = "";
-        valueBox = (String)jComboBox1.getSelectedItem();
+        valueBox = (String)jComboBoxSelection.getSelectedItem();
         if("     Ordinateur".equals(valueBox)){
-            ((CardLayout)jPanel1.getLayout()).show(jPanel1,"ordi");
+            ((CardLayout)jPanelPrincipal.getLayout()).show(jPanelPrincipal,"ordi");
         }
         else if("     Tablette".equals(valueBox)){
-            ((CardLayout)jPanel1.getLayout()).show(jPanel1,"tablette");
+            ((CardLayout)jPanelPrincipal.getLayout()).show(jPanelPrincipal,"tablette");
         }
         else if("     Routeur".equals(valueBox)){
-            ((CardLayout)jPanel1.getLayout()).show(jPanel1, "routeur");
+            ((CardLayout)jPanelPrincipal.getLayout()).show(jPanelPrincipal, "routeur");
         }
         else if("Local".equals(valueBox)){
-            ((CardLayout)jPanel1.getLayout()).show(jPanel1, "local");
+            ((CardLayout)jPanelPrincipal.getLayout()).show(jPanelPrincipal, "local");
         }
         else if("Salle".equals(valueBox)){
-            ((CardLayout)jPanel1.getLayout()).show(jPanel1, "salle");
+            ((CardLayout)jPanelPrincipal.getLayout()).show(jPanelPrincipal, "salle");
         }
         else{
-            ((CardLayout)jPanel1.getLayout()).show(jPanel1, "card5");
+            ((CardLayout)jPanelPrincipal.getLayout()).show(jPanelPrincipal, "card5");
         }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonValidSelectActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonValidTabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidTabActionPerformed
         // TODO add your handling code here:
         this.ajouterAppareil();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonValidTabActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButtonValidLocalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidLocalActionPerformed
         // TODO add your handling code here:
 
         if(this.verifEntreeLocal()){
             BDD bd = new BDD();
             bd.connect(); 
-            String nomLoc = jTextFieldNL.getText();
-            String addrLocal = jTextFieldAL.getText();
-            int nbSLocal = (Integer)jSpinnerNBS.getValue(); 
+            String nomLoc = jTextFieldNameLocal.getText();
+            String addrLocal = jTextFieldAdresseLocal.getText();
+            int nbSLocal = (Integer)jSpinnerNbSalleLocal.getValue(); 
             try {
                 if(bd.exist("Local", "nomLocal", nomLoc)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom du local est déjà présent dans la base", "Erreur Saisie nom local", JOptionPane.ERROR_MESSAGE); 
-                    jTextFieldNL.requestFocus(); 
+                    jTextFieldNameLocal.requestFocus(); 
                 }
                 else{
                     String req = "INSERT INTO Local (nomlocal, lieulocal, nbrsalle) VALUES ('" +nomLoc +"', '" +addrLocal+"', " +nbSLocal+");";
@@ -723,24 +724,24 @@ public class Ajouter extends javax.swing.JFrame {
             System.out.println("Problème insertion local");
         }
 
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_jButtonValidLocalActionPerformed
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void jTextFieldNameSalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNameSalleActionPerformed
         // TODO add your handling code here:
 
 
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_jTextFieldNameSalleActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jButtonValidSalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidSalleActionPerformed
         if(this.verifEntreeSalle()){
             try {
                 BDD bd = new BDD();
                 bd.connect();
-                String nomS = jTextField15.getText();
-                String valueBox = (String)jComboBox2.getSelectedItem();
+                String nomS = jTextFieldNameSalle.getText();
+                String valueBox = (String)jComboBoxEmplacementSalle.getSelectedItem();
                 if(bd.exist("Salle", "nomSalle", nomS)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la salle est déjà présent dans la base", "Erreur Saisie nom salle", JOptionPane.ERROR_MESSAGE); 
-                    jTextField15.requestFocus();                     
+                    jTextFieldNameSalle.requestFocus();                     
                 }
                 else{
                     String req = "INSERT INTO Salle (nomSalle, lieuSalle, nomLocal) VALUES ('" +nomS + "', '" +valueBox+"', '" +valueBox +"');";
@@ -755,17 +756,17 @@ public class Ajouter extends javax.swing.JFrame {
                 Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jButtonValidSalleActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonValidOrdiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidOrdiActionPerformed
         // TODO add your handling code here:
         this.ajouterAppareil();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonValidOrdiActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButtonValidRouteurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidRouteurActionPerformed
         // TODO add your handling code here:
         this.ajouterAppareil();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_jButtonValidRouteurActionPerformed
 
     /**
      * @param args the command line arguments
@@ -809,22 +810,22 @@ public class Ajouter extends javax.swing.JFrame {
      *  @author Florian
      */
     private boolean verifEntreeLocal(){
-        String nomLoc = jTextFieldNL.getText();
-        String addrLocal = jTextFieldAL.getText();
-        int nbSLocal = (Integer)jSpinnerNBS.getValue();        
+        String nomLoc = jTextFieldNameLocal.getText();
+        String addrLocal = jTextFieldAdresseLocal.getText();
+        int nbSLocal = (Integer)jSpinnerNbSalleLocal.getValue();        
         if(nomLoc.length() > 32){
              javax.swing.JOptionPane.showMessageDialog(null,"Le nom du local est trop grand", "Erreur Saisie nom local", JOptionPane.ERROR_MESSAGE); 
-             jTextFieldNL.requestFocus(); 
+             jTextFieldNameLocal.requestFocus(); 
              return false;
         }
         if(addrLocal.length() > 32){
              javax.swing.JOptionPane.showMessageDialog(null,"L'adresse du local est trop grande", "Erreur Saisie adresse local", JOptionPane.ERROR_MESSAGE); 
-             jTextFieldAL.requestFocus(); 
+             jTextFieldAdresseLocal.requestFocus(); 
              return false;
         }
         if(nbSLocal < 1){
              javax.swing.JOptionPane.showMessageDialog(null,"Le nombre de Salle est incorrect", "Erreur Saisie nombre salle ", JOptionPane.ERROR_MESSAGE); 
-             jSpinnerNBS.requestFocus();            
+             jSpinnerNbSalleLocal.requestFocus();            
              return false;
         }
         return true;
@@ -839,10 +840,10 @@ public class Ajouter extends javax.swing.JFrame {
      * @return booléan 
      */
     private boolean verifEntreeSalle(){
-        String nomSalle = jTextField15.getText();
+        String nomSalle = jTextFieldNameSalle.getText();
         if(nomSalle.length() > 32){
              javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la salle est trop grand", "Erreur Saisie nom salle", JOptionPane.ERROR_MESSAGE); 
-             jTextField15.requestFocus(); 
+             jTextFieldNameSalle.requestFocus(); 
              return false;
         }
         return true;
@@ -882,25 +883,25 @@ public class Ajouter extends javax.swing.JFrame {
          */
     
     private boolean verifEntreeOrdi(){
-        String nomO = jTextField1.getText();
-        String addrM = jTextField2.getText();
-        String nomFirm = jTextField4.getText();
+        String nomO = jTextFieldNameOrdi.getText();
+        String addrM = jTextFieldMacOrdi.getText();
+        String nomFirm = jTextFieldFirmOrdi.getText();
         if(this.verifAddrMAC(addrM)){
             if(nomO.length() > 32)
             {
                 javax.swing.JOptionPane.showMessageDialog(null,"Le nom de l'ordinateur est trop grand", "Erreur Saisie nom ordi", JOptionPane.ERROR_MESSAGE); 
-                jTextField1.requestFocus(); 
+                jTextFieldNameOrdi.requestFocus(); 
                 return false; 
             }
             if(nomFirm.length() > 32)
             {
                 javax.swing.JOptionPane.showMessageDialog(null,"Le nom du firmware est trop grand", "Erreur Saisie nom firmware", JOptionPane.ERROR_MESSAGE); 
-                jTextField4.requestFocus(); 
+                jTextFieldFirmOrdi.requestFocus(); 
                 return false;
             }
         }else{
              javax.swing.JOptionPane.showMessageDialog(null,"L'adresse MAC entrée n'est pas correcte", "Erreur Saisie adresse MAC", JOptionPane.ERROR_MESSAGE); 
-             jTextField2.requestFocus(); 
+             jTextFieldMacOrdi.requestFocus(); 
              return false;            
         }
         
@@ -913,25 +914,25 @@ public class Ajouter extends javax.swing.JFrame {
          */
 
     private boolean verifEntreeTablette(){
-        String nomT = jTextField5.getText();
-        String addrM = jTextField6.getText();
-        String nomFirm = jTextField8.getText();
+        String nomT = jTextFieldNameTab.getText();
+        String addrM = jTextFieldMacTab.getText();
+        String nomFirm = jTextFieldFirmTab.getText();
         if(this.verifAddrMAC(addrM)){
             if(nomT.length() > 32)
             {
                 javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la tablette est trop grand", "Erreur Saisie nom tablette", JOptionPane.ERROR_MESSAGE); 
-                jTextField1.requestFocus(); 
+                jTextFieldNameOrdi.requestFocus(); 
                 return false; 
             }
             if(nomFirm.length() > 32)
             {
                 javax.swing.JOptionPane.showMessageDialog(null,"Le nom du firmware est trop grand", "Erreur Saisie nom firmware", JOptionPane.ERROR_MESSAGE); 
-                jTextField4.requestFocus(); 
+                jTextFieldFirmOrdi.requestFocus(); 
                 return false;
             }
         }else{
              javax.swing.JOptionPane.showMessageDialog(null,"L'adresse MAC entrée n'est pas correcte", "Erreur Saisie adresse MAC", JOptionPane.ERROR_MESSAGE); 
-             jTextField2.requestFocus(); 
+             jTextFieldMacOrdi.requestFocus(); 
              return false;            
         }
         
@@ -946,25 +947,25 @@ public class Ajouter extends javax.swing.JFrame {
          */
 
     private boolean verifEntreeRouteur(){
-         String nomR = jTextField10.getText();
-        String addrM = jTextField11.getText();
-        String nomFirm = jTextField7.getText();
+         String nomR = jTextFieldNameRouteur.getText();
+        String addrM = jTextFieldMacRouteur.getText();
+        String nomFirm = jTextFieldFirmRouteur.getText();
         if(this.verifAddrMAC(addrM)){
             if(nomR.length() > 32)
             {
                 javax.swing.JOptionPane.showMessageDialog(null,"Le nom du routeur est trop grand", "Erreur Saisie nom routeur", JOptionPane.ERROR_MESSAGE); 
-                jTextField1.requestFocus(); 
+                jTextFieldNameOrdi.requestFocus(); 
                 return false; 
             }
             if(nomFirm.length() > 32)
             {
                 javax.swing.JOptionPane.showMessageDialog(null,"Le nom du firmware est trop grand", "Erreur Saisie nom firmware", JOptionPane.ERROR_MESSAGE); 
-                jTextField4.requestFocus(); 
+                jTextFieldFirmOrdi.requestFocus(); 
                 return false;
             }
         }else{
              javax.swing.JOptionPane.showMessageDialog(null,"L'adresse MAC entrée n'est pas correcte", "Erreur Saisie adresse MAC", JOptionPane.ERROR_MESSAGE); 
-             jTextField2.requestFocus(); 
+             jTextFieldMacOrdi.requestFocus(); 
              return false;            
         }
         
@@ -981,17 +982,17 @@ public class Ajouter extends javax.swing.JFrame {
             try {
                 BDD bd = new BDD();
                 bd.connect();
-                String nomO = jTextField1.getText();
-                String valueBoxOS = (String)jComboBox5.getSelectedItem();
-                String valueBoxEmp = (String)jComboBox6.getSelectedItem();
+                String nomO = jTextFieldNameOrdi.getText();
+                String valueBoxOS = (String)jComboBoxOsOrdi.getSelectedItem();
+                String valueBoxEmp = (String)jComboBoxEmplacement.getSelectedItem();
                 valueBoxEmp = valueBoxEmp.substring(5);
-                String nomFirm = jTextField4.getText();
-                String valueActive = (String)jComboBox8.getSelectedItem();
-                String typeApp = (String)jComboBox1.getSelectedItem();
-                String adrMac = jTextField2.getText();
+                String nomFirm = jTextFieldFirmOrdi.getText();
+                String valueActive = (String)jComboBoxActive.getSelectedItem();
+                String typeApp = (String)jComboBoxSelection.getSelectedItem();
+                String adrMac = jTextFieldMacOrdi.getText();
                 if(bd.exist("Appareil", "nomapp", nomO)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom de l'ordinateur est déjà présent dans la base", "Erreur Saisie nom ordi", JOptionPane.ERROR_MESSAGE); 
-                    jTextField1.requestFocus();                     
+                    jTextFieldNameOrdi.requestFocus();                     
                 }
                 else{
                     String req = "INSERT INTO Appareil (nomapp, typeappareil, systexpappareil, nomfirmware, active, lieuappareil, nomsalle) VALUES ('" +nomO + "', '" +typeApp+"', '" +valueBoxOS +"', '" +nomFirm+"', " +valueActive+", '" +valueBoxEmp+"', '" +valueBoxEmp+"');";
@@ -1020,17 +1021,17 @@ public class Ajouter extends javax.swing.JFrame {
             try {
                 BDD bd = new BDD();
                 bd.connect();
-                String nomT = jTextField5.getText();
-                String valueBoxOS = (String)jComboBox3.getSelectedItem();
-                String valueBoxEmp = (String)jComboBox4.getSelectedItem();
+                String nomT = jTextFieldNameTab.getText();
+                String valueBoxOS = (String)jComboBoxOsTab.getSelectedItem();
+                String valueBoxEmp = (String)jComboBoxEmplacementTab.getSelectedItem();
                 valueBoxEmp = valueBoxEmp.substring(5);
-                String nomFirm = jTextField8.getText();
-                String valueActive = (String)jComboBox9.getSelectedItem();
-                String typeApp = (String)jComboBox1.getSelectedItem();
-                String adrMac = jTextField6.getText();
+                String nomFirm = jTextFieldFirmTab.getText();
+                String valueActive = (String)jComboBoxActiveTab.getSelectedItem();
+                String typeApp = (String)jComboBoxSelection.getSelectedItem();
+                String adrMac = jTextFieldMacTab.getText();
                 if(bd.exist("Appareil", "nomapp", nomT)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la tablette est déjà présent dans la base", "Erreur Saisie nom tablette", JOptionPane.ERROR_MESSAGE); 
-                    jTextField1.requestFocus();                     
+                    jTextFieldNameOrdi.requestFocus();                     
                 }
                 else{
                     String req = "INSERT INTO Appareil (nomapp, typeappareil, systexpappareil, nomfirmware, active, lieuappareil, nomsalle) VALUES ('" +nomT + "', '" +typeApp+"', '" +valueBoxOS +"', '" +nomFirm+"', " +valueActive+", '" +valueBoxEmp+"', '" +valueBoxEmp+"');";
@@ -1059,17 +1060,17 @@ public class Ajouter extends javax.swing.JFrame {
             try {
                 BDD bd = new BDD();
                 bd.connect();
-                String nomR = jTextField10.getText();
+                String nomR = jTextFieldNameRouteur.getText();
                 String valueBoxOS = " ";
-                String valueBoxEmp = (String)jComboBox7.getSelectedItem();
+                String valueBoxEmp = (String)jComboBoxEmplacementRouteur.getSelectedItem();
                 valueBoxEmp = valueBoxEmp.substring(5);
-                String nomFirm = jTextField7.getText();
-                String valueActive = (String)jComboBox10.getSelectedItem();
-                String typeApp = (String)jComboBox1.getSelectedItem();
-                String adrMac = jTextField11.getText();
+                String nomFirm = jTextFieldFirmRouteur.getText();
+                String valueActive = (String)jComboBoxActiveRouteur.getSelectedItem();
+                String typeApp = (String)jComboBoxSelection.getSelectedItem();
+                String adrMac = jTextFieldMacRouteur.getText();
                 if(bd.exist("Appareil", "nomapp", nomR)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom du routeur est déjà présent dans la base", "Erreur Saisie nom routeur", JOptionPane.ERROR_MESSAGE); 
-                    jTextField1.requestFocus();                     
+                    jTextFieldNameOrdi.requestFocus();                     
                 }
                 else{
                     String req = "INSERT INTO Appareil (nomapp, typeappareil, systexpappareil, nomfirmware, active, lieuappareil, nomsalle) VALUES ('" +nomR + "', '" +typeApp+"', '" +valueBoxOS +"', '" +nomFirm+"', " +valueActive+", '" +valueBoxEmp+"', '" +valueBoxEmp+"');";
@@ -1093,7 +1094,7 @@ public class Ajouter extends javax.swing.JFrame {
      * @author FLorian
      */
     private void ajouterAppareil(){
-        String type = (String)jComboBox1.getSelectedItem();
+        String type = (String)jComboBoxSelection.getSelectedItem();
         if("     Ordinateur".equals(type)){
             this.ajouterOrdi();
         }
@@ -1201,73 +1202,73 @@ public class Ajouter extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox10;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
-    private javax.swing.JComboBox jComboBox5;
-    private javax.swing.JComboBox jComboBox6;
-    private javax.swing.JComboBox jComboBox7;
-    private javax.swing.JComboBox jComboBox8;
-    private javax.swing.JComboBox jComboBox9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JButton jButtonValidLocal;
+    private javax.swing.JButton jButtonValidOrdi;
+    private javax.swing.JButton jButtonValidRouteur;
+    private javax.swing.JButton jButtonValidSalle;
+    private javax.swing.JButton jButtonValidSelect;
+    private javax.swing.JButton jButtonValidTab;
+    private javax.swing.JComboBox jComboBoxActive;
+    private javax.swing.JComboBox jComboBoxActiveRouteur;
+    private javax.swing.JComboBox jComboBoxActiveTab;
+    private javax.swing.JComboBox jComboBoxEmplacement;
+    private javax.swing.JComboBox jComboBoxEmplacementRouteur;
+    private javax.swing.JComboBox jComboBoxEmplacementSalle;
+    private javax.swing.JComboBox jComboBoxEmplacementTab;
+    private javax.swing.JComboBox jComboBoxOsOrdi;
+    private javax.swing.JComboBox jComboBoxOsTab;
+    private javax.swing.JComboBox jComboBoxSelection;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabelActiveOrdi;
+    private javax.swing.JLabel jLabelActiveRouteur;
+    private javax.swing.JLabel jLabelActiveTab;
+    private javax.swing.JLabel jLabelAddLocal;
+    private javax.swing.JLabel jLabelAddOrdi;
+    private javax.swing.JLabel jLabelAddRouteur;
+    private javax.swing.JLabel jLabelAddSalle;
+    private javax.swing.JLabel jLabelAddTab;
+    private javax.swing.JLabel jLabelAdresseLocal;
+    private javax.swing.JLabel jLabelAjouter;
+    private javax.swing.JLabel jLabelEmplacementOrdi;
+    private javax.swing.JLabel jLabelEmplacementRouteur;
+    private javax.swing.JLabel jLabelEmplacementSalle;
+    private javax.swing.JLabel jLabelEmplacementTab;
+    private javax.swing.JLabel jLabelFirmRouteur;
+    private javax.swing.JLabel jLabelFirmTab;
+    private javax.swing.JLabel jLabelFirmwareOrdi;
+    private javax.swing.JLabel jLabelMacOrdi;
+    private javax.swing.JLabel jLabelMacRouteur;
+    private javax.swing.JLabel jLabelMacTab;
+    private javax.swing.JLabel jLabelNameLocal;
+    private javax.swing.JLabel jLabelNameOrdi;
+    private javax.swing.JLabel jLabelNameRouteur;
+    private javax.swing.JLabel jLabelNameSalle;
+    private javax.swing.JLabel jLabelNameTab;
+    private javax.swing.JLabel jLabelNbSalleLocal;
+    private javax.swing.JLabel jLabelOsOrdi;
+    private javax.swing.JLabel jLabelOsTab;
+    private javax.swing.JLabel jLabelSelect;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelLocal;
     private javax.swing.JPanel jPanelOrdi;
+    private javax.swing.JPanel jPanelPrincipal;
     private javax.swing.JPanel jPanelRouteur;
     private javax.swing.JPanel jPanelSalle;
     private javax.swing.JPanel jPanelTablette;
-    private javax.swing.JSpinner jSpinnerNBS;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextFieldAL;
-    private javax.swing.JTextField jTextFieldNL;
+    private javax.swing.JSpinner jSpinnerNbSalleLocal;
+    private javax.swing.JTextField jTextFieldAdresseLocal;
+    private javax.swing.JTextField jTextFieldFirmOrdi;
+    private javax.swing.JTextField jTextFieldFirmRouteur;
+    private javax.swing.JTextField jTextFieldFirmTab;
+    private javax.swing.JTextField jTextFieldMacOrdi;
+    private javax.swing.JTextField jTextFieldMacRouteur;
+    private javax.swing.JTextField jTextFieldMacTab;
+    private javax.swing.JTextField jTextFieldNameLocal;
+    private javax.swing.JTextField jTextFieldNameOrdi;
+    private javax.swing.JTextField jTextFieldNameRouteur;
+    private javax.swing.JTextField jTextFieldNameSalle;
+    private javax.swing.JTextField jTextFieldNameTab;
     // End of variables declaration//GEN-END:variables
 }
