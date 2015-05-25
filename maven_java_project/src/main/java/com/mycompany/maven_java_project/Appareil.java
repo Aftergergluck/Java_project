@@ -13,26 +13,24 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 21204416
+ * @author Vincent
  */
 public class Appareil {
-    	private String nomApp;
-    private String emplacement;
+    private String nomApp;
     private String systEx;
-    private String typeApp;
+    private final String typeApp;
+    private String firmware;
     private boolean actif;
     private List<CarteReseau> listInterface;
 
-    public Appareil(String nomApp, String emplacement, String systEx, String typeApp, boolean actif, List<CarteReseau> listInterface) {
+    public Appareil(String nomApp, String systEx, String typeApp, String firmware, boolean actif) {
         this.nomApp = nomApp;
-        this.emplacement = emplacement;
         this.systEx = systEx;
         this.typeApp = typeApp;
+        this.firmware = firmware;
         this.actif = actif;
-        this.listInterface = listInterface;
-
-
     }
+
 
     public String getNomApp() {
         return nomApp;
@@ -42,12 +40,28 @@ public class Appareil {
         this.nomApp = nomApp;
     }
 
+    public void setActif(boolean actif) {
+        this.actif = actif;
+    }
+
+    public void setSystEx(String systEx) {
+        this.systEx = systEx;
+    }
+
+    public void setFirmware(String firmware) {
+        this.firmware = firmware;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
     private List<CarteReseau> obtenirListeInterface() {
-        this.listInterface = new ArrayList<CarteReseau>();
+        this.listInterface = new ArrayList();
         try {
             BDD bd = new BDD();
             bd.connect();
-            bd.request("SELECT adrmacappareil FROM carte_reseau WHERE nomapp = '" + this.getNomApp() + "';");
+            bd.select("SELECT adrmacappareil FROM carte_reseau WHERE nomapp = '" + this.getNomApp() + "';");
             ResultSet result = bd.getResults();
 
             while (result.next()) {
@@ -61,7 +75,35 @@ public class Appareil {
         return listInterface;
 
     }
-	
+
+    public void affecterCarte(CarteReseau c) {
+        listInterface.add(c);
+    }
     
+    public void desaffecterCarte(CarteReseau c) {
+        listInterface.remove(c);
+    }
+	
+    public void ajoutAppBDD (String nomSalle) {
+        try {
+            BDD bdd = new BDD();
+            bdd.connect();
+            if (!bdd.exist("Appareil","nomApp",nomApp))
+                bdd.request("INSERT INTO Appareil VALUES ('"+nomApp+"','"+typeApp+"','"+systEx+"','"+firmware+"',"+actif+",'"+nomSalle+"')");
+        } catch (SQLException e) {
+            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
+    
+    public void modifAppBDD (String nomSalle) {
+        try {
+            BDD bdd = new BDD();
+            bdd.connect();
+            if (bdd.exist("Appareil","nomApp",nomApp))
+                bdd.request("UPDATE Appareil SET nomApp='"+nomApp+"' AND typeappareil='"+typeApp+"' AND sysexpappareil='"+systEx+"' AND nomfirmware='"+firmware+"' AND active="+actif+" AND nomSalle='"+nomSalle+"';");
+        } catch (SQLException e) {
+            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
     
 }

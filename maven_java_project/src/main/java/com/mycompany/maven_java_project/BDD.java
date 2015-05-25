@@ -5,6 +5,8 @@
  */
 package com.mycompany.maven_java_project;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -107,5 +109,81 @@ public class BDD {
         }
         
     } 
+    
+    public List<CarteReseau> chargerListeCartes() {
+        List<CarteReseau> list = new ArrayList();
+        try {
+            BDD bd = new BDD();
+            bd.connect();
+            bd.select("SELECT * FROM Carte_reseau");
+            ResultSet r = bd.getResults();
+
+            while (r.next()) {
+                CarteReseau cr = new CarteReseau(r.getString(1));
+                list.add(cr);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    } 
+    
+    public List<Appareil> chargerListeApp() {
+        List<Appareil> list = new ArrayList();
+        try {
+            BDD bd = new BDD();
+            bd.connect();
+            bd.select("SELECT * FROM Appareil");
+            ResultSet r = bd.getResults();
+
+            while (r.next()) {
+                Appareil a = new Appareil(r.getString(1),r.getString(3),r.getString(2),r.getString(4),r.getBoolean(5));
+                list.add(a);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    } 
+    
+    public List<Salle> chargerListeSalle() {
+        List<Salle> list = new ArrayList();
+        try {
+            BDD bd = new BDD();
+            bd.connect();
+            bd.select("SELECT * FROM Salle");
+            ResultSet r = bd.getResults();
+
+            while (r.next()) {
+                Salle s = new Salle(r.getString(1),r.getInt(2));
+                list.add(s);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    } 
+    
+    public List<Local> chargerListeLocal() {
+        List<Local> list = new ArrayList();
+        try {
+            BDD bd = new BDD();
+            bd.connect();
+            bd.select("SELECT * FROM Local");
+            ResultSet r = bd.getResults();
+
+            while (r.next()) {
+                Local l = new Local(r.getString(1),r.getString(2),r.getInt(3));
+                list.add(l);
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
     
 }

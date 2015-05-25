@@ -24,7 +24,7 @@
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="modifAddrMac" mc="Operation" uid="aea67a8f-ac13-4ba8-a980-64dbc04cfaf4"/>
+          <ID name="ajoutAppBDD" mc="Operation" uid="ef8fa742-5e1c-486a-b802-72082350738b"/>
           <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
@@ -33,36 +33,25 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[modifAddrMac]]></ATT>
+            <ATT name="Name"><![CDATA[ajoutAppBDD]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="adrMac" mc="Parameter" uid="33d9286e-3589-483d-95aa-dfafb9d954ec"/>
-                <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[adrMac]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="modifAppBDD" mc="Operation" uid="3c9943db-0902-43db-8da4-25048de65c73"/>
+          <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[modifAppBDD]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="OwnedAttribute">
@@ -253,15 +242,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="7e84ba03-0f70-464f-a404-0d8ca187a96a"/>
-                <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="7e84ba03-0f70-464f-a404-0d8ca187a96a"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -325,15 +306,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="6ee0aa98-8ea9-4e8b-b1ee-2e30b0ec0e73"/>
-                <PID name="Appareil" mc="Class" uid="fcda71b5-874d-43ba-8f4c-84a5faa7a86d"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="6ee0aa98-8ea9-4e8b-b1ee-2e30b0ec0e73"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>

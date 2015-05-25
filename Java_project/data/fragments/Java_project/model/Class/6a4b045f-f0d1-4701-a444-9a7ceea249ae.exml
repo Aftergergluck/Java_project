@@ -630,6 +630,47 @@
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="modifAddrMac" mc="Operation" uid="aea67a8f-ac13-4ba8-a980-64dbc04cfaf4"/>
+          <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[modifAddrMac]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="adrMac" mc="Parameter" uid="33d9286e-3589-483d-95aa-dfafb9d954ec"/>
+                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[adrMac]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
@@ -692,15 +733,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="96cec83f-6422-44b0-a654-6437db2aff94"/>
-                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="96cec83f-6422-44b0-a654-6437db2aff94"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -764,15 +797,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="200d26b7-4791-4bd1-bf84-be6ec6291d87"/>
-                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="200d26b7-4791-4bd1-bf84-be6ec6291d87"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -836,15 +861,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="647c1497-4e52-488f-a5c7-5915b248665f"/>
-                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="647c1497-4e52-488f-a5c7-5915b248665f"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -908,15 +925,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <OBJECT>
-                <ID name="" mc="Association" uid="510aa543-f220-41b8-b19a-b8e0160d195c"/>
-                <PID name="Controle" mc="Class" uid="6a4b045f-f0d1-4701-a444-9a7ceea249ae"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
+              <COMPID name="" mc="Association" uid="510aa543-f220-41b8-b19a-b8e0160d195c"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
