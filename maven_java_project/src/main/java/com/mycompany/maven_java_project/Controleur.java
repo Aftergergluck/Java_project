@@ -4,14 +4,14 @@
  */
 package com.mycompany.maven_java_project;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Controleur gérant toute la logique applicative à partir des choix de l'utilisateur
+ * fait dans la partie dialogue.
  * @author Vincent
  */
 public class Controleur {
@@ -32,9 +32,9 @@ public class Controleur {
     
     
     /**
-     * Chercher un appareil dans la liste.
-     * @param nom
-     * @return 
+     * Chercher un appareil en particulier dans la liste des appareils.
+     * @param nom nom de l'appareil à chercher.
+     * @return numéro d'index où se trouve l'appareil, ou -1 sinon.
      */
     public int chercherNomListeApp (String nom) {
         int i = 0;
@@ -46,9 +46,9 @@ public class Controleur {
     }
     
     /**
-     * 
-     * @param nom
-     * @return 
+     * Cherche une salle en particulier dans la liste des salles.
+     * @param nom nom de la salle à chercher.
+     * @return numéro d'index où se trouve la salle, ou -1 sinon.
      */
     public int chercherNomListeSalle (String nom) {
         int i = 0;
@@ -60,9 +60,9 @@ public class Controleur {
     }
     
     /**
-     * 
-     * @param nom
-     * @return 
+     * Cherche un local en particulier dans la liste des locaux.
+     * @param nom nom du local à chercher.
+     * @return numéro d'index où se trouve le local, ou -1 sinon.
      */
     public int chercherNomListeLocal (String nom) {
         int i = 0;

@@ -9,7 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Entité représentant les interfaces réseaux des appareils.
  * @author Vincent
  */
 public class CarteReseau {
@@ -17,22 +17,34 @@ public class CarteReseau {
     private String addrMAC;
 
     /**
-     * use mac
-     *
+     * Constructeur de CarteReseau à partir d'une adresse MAC.
      * @param addrMAC mac addrss
      */
     public CarteReseau(String addrMAC) {
         this.addrMAC = addrMAC;
     }
 
+    /**
+     * Getter de l'attribut adresse MAC.
+     * @return l'adresse MAC de la carte sous forme de String.
+     */
     public String getAddrMAC() {
         return addrMAC;
     }
 
+    /**
+     * Setter de l'attribut adresse MAC.
+     * @param addrMAC la nouvelle adresse MAC de la carte.
+     */
     public void setAddrMAC(String addrMAC) {
         this.addrMAC = addrMAC;
     }
     
+    /**
+     * Ajoute une nouvelle CarteReseau dans la base de données, avec l'appareil
+     * auquel elle est assignée.
+     * @param nomApp nom de l'appareil contenant la carte réseau en question.
+     */
     public void ajoutCarteBDD(String nomApp) {
         try {
             BDD bdd = new BDD();
@@ -44,6 +56,10 @@ public class CarteReseau {
         }
     }
     
+    /**
+     * Modifier dans la base de données une carte existante.
+     * @param nomApp nom de l'appareil contenant la carte réseau en question.
+     */
     public void modifCarteBDD(String nomApp) {
         try {
             BDD bdd = new BDD();

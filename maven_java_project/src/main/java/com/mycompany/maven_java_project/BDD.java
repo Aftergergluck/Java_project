@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 /**
  * Interaction avec la BDD
  * @author Florian
+ * @author Vincent
  */
 public class BDD {
     
@@ -51,7 +52,7 @@ public class BDD {
      * Fonction permettant d'exécuter une requête passée en paramètre
      * 
      * @author Florian
-     * 
+     * @param req requête à exécuter dans la BDD.
      */
     public void request(String req){
                 try {
@@ -72,13 +73,13 @@ public class BDD {
     
     /**
      * Fonction testant si un attribut est présent dans la BDD
-     * Paramètres : table , attribut , valeur attribut
      * 
      * @author Florian
      * @return Boolean
      * 
-     * @param attribut
-     * @param valeur
+     * @param table table concernée par la requête.
+     * @param attribut attribut concerné par la requête.
+     * @param valeur valeur dont on cherche l'existence.
      */
     
     public boolean exist(String table, String attribut, String valeur) throws SQLException{
@@ -91,7 +92,7 @@ public class BDD {
     /**
      * Fonction permettant de faire un Select
      * @author Florian
-     * @return Resultat
+     * @param req requête à exécuter dans la BDD.
      */
     public void select(String req){
         try {
@@ -110,6 +111,10 @@ public class BDD {
         
     } 
     
+    /**
+     * Charge la totalité des cartes réseau de la BDD dans un liste. 
+     * @return la liste de toutes les cartes réseau de la BDD.
+     */
     public List<CarteReseau> chargerListeCartes() {
         List<CarteReseau> list = new ArrayList();
         try {
@@ -129,6 +134,10 @@ public class BDD {
         return list;
     } 
     
+    /**
+     * Charge la totalité des appareils de la BDD dans un liste.
+     * @return la liste de tous les appareils de la BDD.
+     */
     public List<Appareil> chargerListeApp() {
         List<Appareil> list = new ArrayList();
         try {
@@ -148,6 +157,10 @@ public class BDD {
         return list;
     } 
     
+    /**
+     * Charge la totalité des salles de la BDD dans une liste.
+     * @return la liste de toutes les salles de la BDD.
+     */
     public List<Salle> chargerListeSalle() {
         List<Salle> list = new ArrayList();
         try {
@@ -167,6 +180,10 @@ public class BDD {
         return list;
     } 
     
+    /**
+     * Charge la totalité des locaux de la BDD dans une liste.
+     * @return la liste de tous les locaux de la BDD.
+     */
     public List<Local> chargerListeLocal() {
         List<Local> list = new ArrayList();
         try {
