@@ -27,7 +27,7 @@ public class Local {
      * @param capa
      * @param adr 
      */
-    public Local(String nomLocal, int capa, String adr) {
+    public Local(String nomLocal, String adr, int capa) {
         this.nomLocal = nomLocal;
         this.capa = capa;
         this.adr = adr;

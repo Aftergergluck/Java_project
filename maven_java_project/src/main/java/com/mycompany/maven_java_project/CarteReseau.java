@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  */
 public class CarteReseau {
 
-    String addrMAC;
+    private String addrMAC;
 
     /**
      * use mac

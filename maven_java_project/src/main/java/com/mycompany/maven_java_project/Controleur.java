@@ -23,17 +23,11 @@ public class Controleur {
     private List<CarteReseau> listeCarte;
 
     public Controleur() {
-        BDD b = new BDD();
-        b.connect();
-        b.select("SELECT * FROM Appareil");
-        ResultSet resApp = b.getResults();
-        b.select("SELECT * FROM Salle");
-        ResultSet resS = b.getResults();
-        b.select("SELECT * FROM Local");
-        ResultSet resL = b.getResults();
-        b.select("SELECT * FROM Carte_reseau");
-        ResultSet resCarte = b.getResults();
-        
+        BDD bdd = new BDD();
+        listeCarte = bdd.chargerListeCartes();
+        listeApp = bdd.chargerListeApp();
+        listeSalles = bdd.chargerListeSalle();
+        listeLocaux = bdd.chargerListeLocal();
     }
     
     
@@ -136,7 +130,7 @@ public class Controleur {
      * @param capa nombre de salles que nous pouvons placer dans ce local.
      */
     public void ajouterLocal (String nomLocal, int capa, String adr) {
-        Local l = new Local(nomLocal,capa,adr);
+        Local l = new Local(nomLocal,adr,capa);
         listeLocaux.add(l);
     }
     

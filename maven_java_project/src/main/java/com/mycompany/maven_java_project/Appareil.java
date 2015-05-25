@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class Appareil {
     private String nomApp;
     private String systEx;
-    private String typeApp;
+    private final String typeApp;
     private String firmware;
     private boolean actif;
     private List<CarteReseau> listInterface;
@@ -61,7 +61,7 @@ public class Appareil {
         try {
             BDD bd = new BDD();
             bd.connect();
-            bd.request("SELECT adrmacappareil FROM carte_reseau WHERE nomapp = '" + this.getNomApp() + "';");
+            bd.select("SELECT adrmacappareil FROM carte_reseau WHERE nomapp = '" + this.getNomApp() + "';");
             ResultSet result = bd.getResults();
 
             while (result.next()) {
