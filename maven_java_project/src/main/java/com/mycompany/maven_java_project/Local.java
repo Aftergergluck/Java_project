@@ -105,15 +105,11 @@ public class Local {
     /**
      * Modifier un local existant dans la base de données.
      */
-    public void modifLocalBDD () {
-        try {
-            BDD bdd = new BDD();
-            bdd.connect();
-            if (!bdd.exist("Local","nomLocal",nomLocal))
-                bdd.request("UPDATE local SET nomlocal = '"+nomLocal+"' AND lieulocal = '"+adr+"' AND nbrsalle = '"+capa+"')");
-        } catch (SQLException e) {
-            Logger.getLogger(Local.class.getName()).log(Level.SEVERE, null, e);
-        }
+    public void modifLocalBDD (String ancienNom) {
+        BDD bdd = new BDD();
+        bdd.connect();
+        bdd.request("ALTER TABLE local disable trigger all;UPDATE local SET nomlocal = '"+nomLocal+"', lieulocal = '"+adr+"', nbrsalle = '"+capa+"' WHERE nomLocal = '"+ancienNom+"';ALTER TABLE local enable trigger all;");
+        bdd.request("UPDATE salle SET nomlocal = '"+nomLocal+"' WHERE nomlocal = '" +ancienNom+"'");
     }
     
 }

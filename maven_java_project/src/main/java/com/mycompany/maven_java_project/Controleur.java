@@ -6,6 +6,7 @@ package com.mycompany.maven_java_project;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.logging.Level;
@@ -34,7 +35,10 @@ public class Controleur {
         listeApp = bdd.chargerListeApp();
         listeSalles = bdd.chargerListeSalle();
         listeLocaux = bdd.chargerListeLocal();
-        
+        for (int i = 0; i < listeSalles.size(); i++) {
+            System.out.println(listeSalles.get(i).getNomSalle());
+            
+        }
         lienSalle = bdd.chargerLienSalle(listeLocaux);
         for (int i = 0; i < listeLocaux.size(); i++) {
             for (int j = 0; j < lienSalle.get(listeLocaux.get(i)).size(); j++) {
@@ -56,6 +60,42 @@ public class Controleur {
             }
         } 
         
+        for (int i = 0; i < listeSalles.size(); i++) {
+            System.out.println("Salle = "+listeSalles.get(i).getNomSalle());
+            for (int j = 0; j < listeSalles.get(i).getListeApp().size(); j++) {
+                System.out.println("App = "+listeSalles.get(i).getListeApp().get(j).getNomApp());
+            }
+        }
+        
+        for (int i = 0; i < listeLocaux.size(); i++) {
+            System.out.println("local :"+listeLocaux.get(i).getNomLocal());
+            for (int j = 0; j < listeLocaux.get(i).getListeSalle().size(); j++) {
+                System.out.println("Salle : "+listeLocaux.get(i).getListeSalle().get(j).getNomSalle());
+                System.out.println("kmax : "+listeLocaux.get(i).getListeSalle().get(j).getListeApp().size());
+                for (int k = 0; k < listeLocaux.get(i).getListeSalle().get(j).getListeApp().size(); k++) {
+                    System.out.println("App : "+listeLocaux.get(i).getListeSalle().get(j).getListeApp().get(k).getNomApp());
+                }
+                
+            }
+        }
+        
+        int z = 0;
+        int y = 0;
+        int x = 0;
+        Enumeration key = lienAppareil.keys();
+        ArrayList<ArrayList<Appareil>> a = new ArrayList<ArrayList<Appareil>>(lienAppareil.values());
+        while (key.hasMoreElements() && z<10) {
+            System.out.println(key);
+            while (y < a.size()) {
+                while (x < a.get(y).size()) {
+                    System.out.println(" : "+a.get(y).get(x).getNomApp());
+                    x++;
+                }
+                y++;
+            }
+            key.nextElement();
+            z++;
+        }
     }
 
     public List<Local> getListeLocaux() {
@@ -96,12 +136,17 @@ public class Controleur {
      * @return numéro d'index où se trouve la salle, ou -1 sinon.
      */
     public int chercherNomListeSalle (String nom) {
-        int i = 0;
+        /*int i = 0;
         while (!listeSalles.get(i).getNomSalle().equals(nom)) {i++;}
         if (listeSalles.get(i).getNomSalle().equals(nom))
             return i;
         else
-            return -1;
+            return -1;*/
+        for (int i = 0; i < listeSalles.size(); i++) {
+            if (listeSalles.get(i).getNomSalle().equals(nom))
+                return i;
+        }
+        return -1;
     }
     
     /**
@@ -110,12 +155,21 @@ public class Controleur {
      * @return numéro d'index où se trouve le local, ou -1 sinon.
      */
     public int chercherNomListeLocal (String nom) {
-        int i = 0;
+        /*int i = 0;
         while (!listeLocaux.get(i).getNomLocal().equals(nom)) {i++;}
         if (listeLocaux.get(i).getNomLocal().equals(nom))
             return i;
         else
-            return -1;
+            return -1;*/
+
+         for (int i = 0; i < listeLocaux.size(); i++) {
+            if (listeLocaux.get(i).getNomLocal().equals(nom)){
+                return i;                
+            }
+
+        }
+        return -1;       
+        
     }
     
     /**
@@ -222,9 +276,9 @@ public class Controleur {
      * @param s salle à modifier.
      * @param nom nom de la salle.
      * @param emp local contenant la salle.
-     * @param capa nombre d'appareil pouvant être ajouté à la salle.
+     * //@param capa nombre d'appareil pouvant être ajouté à la salle.
      */
-    public void modifierSalle (Salle s, String nom, String emp, int capa) {
+    public void modifierSalle (Salle s, String nom, String emp/*, int capa*/) {
         try {
             BDD bd = new BDD();
             bd.connect();
@@ -235,22 +289,19 @@ public class Controleur {
         }
         listeLocaux.get(chercherNomListeApp(emp)).affecterSalle(s);
         s.setNomSalle(nom);
-        s.setCapa(capa);
+        //s.setCapa(capa);
         s.modifSalleBDD(emp);
     }
     
     /**
      * Modifier un ou plusieurs paramètres d'un local
-     * @param l local à modifier.
+     * @param ancienNom ancien nom du local.
      * @param nom nom du local.
-     * @param emp adresse du local.
-     * @param nbSalle nombre de salle contenues dans le local.
      */
-    public void modifierLocal (Local l, String nom, String emp, int nbSalle) {
+    public void modifierLocal (String ancienNom, String nom) {
+        Local l = listeLocaux.get(chercherNomListeLocal(ancienNom));
         l.setNomLocal(nom);
-        l.setAdr(emp);
-        l.setCapa(nbSalle);
-        l.modifLocalBDD();
+        l.modifLocalBDD(ancienNom);
     }
     
     /**

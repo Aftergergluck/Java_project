@@ -698,8 +698,6 @@ public class Ajouter extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         if(this.verifEntreeLocal()){
-           /* BDD bd = new BDD();
-            bd.connect(); */
             Controleur ctrl = new Controleur();
             String nomLoc = jTextFieldNameLocal.getText();
             String addrLocal = jTextFieldAdresseLocal.getText();
@@ -710,25 +708,6 @@ public class Ajouter extends javax.swing.JFrame {
             princ.setLocationRelativeTo(null);
             this.setVisible(false);
             princ.setVisible(true);
-            /*try {
-                if(bd.exist("Local", "nomLocal", nomLoc)){
-                    javax.swing.JOptionPane.showMessageDialog(null,"Le nom du local est déjà présent dans la base", "Erreur Saisie nom local", JOptionPane.ERROR_MESSAGE); 
-                    jTextFieldNameLocal.requestFocus(); 
-                }
-                else{
-                    String req = "INSERT INTO Local (nomlocal, lieulocal, nbrsalle) VALUES ('" +nomLoc +"', '" +addrLocal+"', " +nbSLocal+");";
-                    bd.request(req);
-                    javax.swing.JOptionPane.showMessageDialog(null,"Le local " +nomLoc+ " a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                    Principal princ = new Principal();
-                    princ.setLocationRelativeTo(null);
-                    this.setVisible(false);
-                    princ.setVisible(true);
-
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
-
         }
         else{
             System.out.println("Problème insertion local");
@@ -744,34 +723,15 @@ public class Ajouter extends javax.swing.JFrame {
 
     private void jButtonValidSalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidSalleActionPerformed
         if(this.verifEntreeSalle()){
-            /*try {
-                BDD bd = new BDD();
-                bd.connect();*/
-                Controleur ctrl = new Controleur();
-                String nomS = jTextFieldNameSalle.getText();
-                String valueBox = (String)jComboBoxEmplacementSalle.getSelectedItem();
-                ctrl.ajouterSalle(nomS, 10, valueBox);
-                javax.swing.JOptionPane.showMessageDialog(null,"La salle " +nomS+ " dans le local " +valueBox +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                Principal princ = new Principal();
-                princ.setLocationRelativeTo(null);
-                this.setVisible(false);
-                princ.setVisible(true);                  
-               /* if(bd.exist("Salle", "nomSalle", nomS)){
-                    javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la salle est déjà présent dans la base", "Erreur Saisie nom salle", JOptionPane.ERROR_MESSAGE); 
-                    jTextFieldNameSalle.requestFocus();                     
-                }
-                else{
-                    String req = "INSERT INTO Salle (nomSalle, lieuSalle, nomLocal) VALUES ('" +nomS + "', '" +valueBox+"', '" +valueBox +"');";
-                    bd.request(req);
-                    javax.swing.JOptionPane.showMessageDialog(null,"La salle " +nomS+ " dans le local " +valueBox +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                    Principal princ = new Principal();
-                    princ.setLocationRelativeTo(null);
-                    this.setVisible(false);
-                    princ.setVisible(true);                    
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
+            Controleur ctrl = new Controleur();
+            String nomS = jTextFieldNameSalle.getText();
+            String valueBox = (String)jComboBoxEmplacementSalle.getSelectedItem();
+            ctrl.ajouterSalle(nomS, 10, valueBox);
+            javax.swing.JOptionPane.showMessageDialog(null,"La salle " +nomS+ " dans le local " +valueBox +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+            Principal princ = new Principal();
+            princ.setLocationRelativeTo(null);
+            this.setVisible(false);
+            princ.setVisible(true);                  
         }
     }//GEN-LAST:event_jButtonValidSalleActionPerformed
 
@@ -996,43 +956,22 @@ public class Ajouter extends javax.swing.JFrame {
      */
     private void ajouterOrdi(){
         if(this.verifEntreeOrdi()){
-            /*try {
-                BDD bd = new BDD();
-                bd.connect();*/
-                Controleur ctrl = new Controleur();
-                String nomO = jTextFieldNameOrdi.getText();
-                String valueBoxOS = (String)jComboBoxOsOrdi.getSelectedItem();
-                String valueBoxEmp = (String)jComboBoxEmplacement.getSelectedItem();
-                valueBoxEmp = valueBoxEmp.substring(5);
-                String nomFirm = jTextFieldFirmOrdi.getText();
-                String valueActive = (String)jComboBoxActive.getSelectedItem();
-                String typeApp = (String)jComboBoxSelection.getSelectedItem();
-                String adrMac = jTextFieldMacOrdi.getText();
-                ctrl.ajouterApp(nomO, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
-                ctrl.ajouterCarteReseau(adrMac, nomO);
-                javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomO +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                Principal princ = new Principal();
-                princ.setLocationRelativeTo(null);
-                this.setVisible(false);
-                princ.setVisible(true);                  
-                /*if(bd.exist("Appareil", "nomapp", nomO)){
-                    javax.swing.JOptionPane.showMessageDialog(null,"Le nom de l'ordinateur est déjà présent dans la base", "Erreur Saisie nom ordi", JOptionPane.ERROR_MESSAGE); 
-                    jTextFieldNameOrdi.requestFocus();                     
-                }
-                else{
-                    String req = "INSERT INTO Appareil (nomapp, typeappareil, systexpappareil, nomfirmware, active, lieuappareil, nomsalle) VALUES ('" +nomO + "', '" +typeApp+"', '" +valueBoxOS +"', '" +nomFirm+"', " +valueActive+", '" +valueBoxEmp+"', '" +valueBoxEmp+"');";
-                    bd.request(req);
-                    req = "INSERT INTO carte_reseau (adrmacappareil, nomapp) VALUES ('" +adrMac +"', '" +nomO+"');";
-                    bd.request(req);
-                    javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomO +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                    Principal princ = new Principal();
-                    princ.setLocationRelativeTo(null);
-                    this.setVisible(false);
-                    princ.setVisible(true);                    
-                }*/
-            /*} catch (SQLException ex) {
-                Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
+            Controleur ctrl = new Controleur();
+            String nomO = jTextFieldNameOrdi.getText();
+            String valueBoxOS = (String)jComboBoxOsOrdi.getSelectedItem();
+            String valueBoxEmp = (String)jComboBoxEmplacement.getSelectedItem();
+            valueBoxEmp = valueBoxEmp.substring(5);
+            String nomFirm = jTextFieldFirmOrdi.getText();
+            String valueActive = (String)jComboBoxActive.getSelectedItem();
+            String typeApp = (String)jComboBoxSelection.getSelectedItem();
+            String adrMac = jTextFieldMacOrdi.getText();
+            ctrl.ajouterApp(nomO, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
+            ctrl.ajouterCarteReseau(adrMac, nomO);
+            javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomO +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+            Principal princ = new Principal();
+            princ.setLocationRelativeTo(null);
+            this.setVisible(false);
+            princ.setVisible(true);                  
         }              
     }
     
@@ -1043,43 +982,22 @@ public class Ajouter extends javax.swing.JFrame {
      */
     private void ajouterTablette(){
          if(this.verifEntreeTablette()){
-            /*try {
-                BDD bd = new BDD();
-                bd.connect();*/
-                Controleur ctrl = new Controleur();
-                String nomT = jTextFieldNameTab.getText();
-                String valueBoxOS = (String)jComboBoxOsTab.getSelectedItem();
-                String valueBoxEmp = (String)jComboBoxEmplacementTab.getSelectedItem();
-                valueBoxEmp = valueBoxEmp.substring(5);
-                String nomFirm = jTextFieldFirmTab.getText();
-                String valueActive = (String)jComboBoxActiveTab.getSelectedItem();
-                String typeApp = (String)jComboBoxSelection.getSelectedItem();
-                String adrMac = jTextFieldMacTab.getText();
-                ctrl.ajouterApp(nomT, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
-                ctrl.ajouterCarteReseau(adrMac, nomT);
-                javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomT +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                Principal princ = new Principal();
-                princ.setLocationRelativeTo(null);
-                this.setVisible(false);
-                princ.setVisible(true); 
-               /* if(bd.exist("Appareil", "nomapp", nomT)){
-                    javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la tablette est déjà présent dans la base", "Erreur Saisie nom tablette", JOptionPane.ERROR_MESSAGE); 
-                    jTextFieldNameOrdi.requestFocus();                     
-                }
-                else{
-                    String req = "INSERT INTO Appareil (nomapp, typeappareil, systexpappareil, nomfirmware, active, lieuappareil, nomsalle) VALUES ('" +nomT + "', '" +typeApp+"', '" +valueBoxOS +"', '" +nomFirm+"', " +valueActive+", '" +valueBoxEmp+"', '" +valueBoxEmp+"');";
-                    bd.request(req);
-                    req = "INSERT INTO carte_reseau (adrmacappareil, nomapp) VALUES ('" +adrMac +"', '" +nomT+"');";
-                    bd.request(req);
-                    javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomT +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                    Principal princ = new Principal();
-                    princ.setLocationRelativeTo(null);
-                    this.setVisible(false);
-                    princ.setVisible(true);                    
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
+            Controleur ctrl = new Controleur();
+            String nomT = jTextFieldNameTab.getText();
+            String valueBoxOS = (String)jComboBoxOsTab.getSelectedItem();
+            String valueBoxEmp = (String)jComboBoxEmplacementTab.getSelectedItem();
+            valueBoxEmp = valueBoxEmp.substring(5);
+            String nomFirm = jTextFieldFirmTab.getText();
+            String valueActive = (String)jComboBoxActiveTab.getSelectedItem();
+            String typeApp = (String)jComboBoxSelection.getSelectedItem();
+            String adrMac = jTextFieldMacTab.getText();
+            ctrl.ajouterApp(nomT, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
+            ctrl.ajouterCarteReseau(adrMac, nomT);
+            javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomT +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+            Principal princ = new Principal();
+            princ.setLocationRelativeTo(null);
+            this.setVisible(false);
+            princ.setVisible(true); 
         }        
     }
     
@@ -1090,43 +1008,22 @@ public class Ajouter extends javax.swing.JFrame {
      */
     private void ajouterRouteur(){
           if(this.verifEntreeRouteur()){
-           /* try {
-                BDD bd = new BDD();
-                bd.connect();*/
-                Controleur ctrl = new Controleur();
-                String nomR = jTextFieldNameRouteur.getText();
-                String valueBoxOS = " ";
-                String valueBoxEmp = (String)jComboBoxEmplacementRouteur.getSelectedItem();
-                valueBoxEmp = valueBoxEmp.substring(5);
-                String nomFirm = jTextFieldFirmRouteur.getText();
-                String valueActive = (String)jComboBoxActiveRouteur.getSelectedItem();
-                String typeApp = (String)jComboBoxSelection.getSelectedItem();
-                String adrMac = jTextFieldMacRouteur.getText();
-                ctrl.ajouterApp(nomR, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
-                ctrl.ajouterCarteReseau(adrMac, nomR);
-                javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomR +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                Principal princ = new Principal();
-                princ.setLocationRelativeTo(null);
-                this.setVisible(false);
-                princ.setVisible(true);   
-                /*if(bd.exist("Appareil", "nomapp", nomR)){
-                    javax.swing.JOptionPane.showMessageDialog(null,"Le nom du routeur est déjà présent dans la base", "Erreur Saisie nom routeur", JOptionPane.ERROR_MESSAGE); 
-                    jTextFieldNameOrdi.requestFocus();                     
-                }
-                else{
-                    String req = "INSERT INTO Appareil (nomapp, typeappareil, systexpappareil, nomfirmware, active, lieuappareil, nomsalle) VALUES ('" +nomR + "', '" +typeApp+"', '" +valueBoxOS +"', '" +nomFirm+"', " +valueActive+", '" +valueBoxEmp+"', '" +valueBoxEmp+"');";
-                    bd.request(req);
-                    req = "INSERT INTO carte_reseau (adrmacappareil, nomapp) VALUES ('" +adrMac +"', '" +nomR+"');";
-                    bd.request(req);
-                    javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomR +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
-                    Principal princ = new Principal();
-                    princ.setLocationRelativeTo(null);
-                    this.setVisible(false);
-                    princ.setVisible(true);                    
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
+            Controleur ctrl = new Controleur();
+            String nomR = jTextFieldNameRouteur.getText();
+            String valueBoxOS = " ";
+            String valueBoxEmp = (String)jComboBoxEmplacementRouteur.getSelectedItem();
+            valueBoxEmp = valueBoxEmp.substring(5);
+            String nomFirm = jTextFieldFirmRouteur.getText();
+            String valueActive = (String)jComboBoxActiveRouteur.getSelectedItem();
+            String typeApp = (String)jComboBoxSelection.getSelectedItem();
+            String adrMac = jTextFieldMacRouteur.getText();
+            ctrl.ajouterApp(nomR, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
+            ctrl.ajouterCarteReseau(adrMac, nomR);
+            javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomR +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+            Principal princ = new Principal();
+            princ.setLocationRelativeTo(null);
+            this.setVisible(false);
+            princ.setVisible(true);   
         }        
     }
     
@@ -1159,40 +1056,14 @@ public class Ajouter extends javax.swing.JFrame {
      * @return ComboBoxModel 
      */
     private ComboBoxModel getComboBoxModelLocal() {
-    
-       /* try {
-            // TODO add your handling code here:
-            BDD bd = new BDD();
-            bd.connect();
-            bd.select("SELECT nomLocal FROM Local");
-            String[] locaux = new String[100];
-            int i = 0;
-            while(bd.getResults().next())
-            {
-                locaux[i] = bd.getResults().getString(1);
-                i++;
-            }
-            String[] item = new String[i];
-            int cpt = i;
-            
-            for(i = 0; i<cpt; i++){
-                item[i] = locaux[i];
-            }
-            
-            return new DefaultComboBoxModel(item);
-        } catch (SQLException ex) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return new DefaultComboBoxModel();*/
         Controleur ctrl = new Controleur();
         List<Local> listLocal = ctrl.getListeLocaux();
         String[] item = new String[listLocal.size()];
         for (int i = 0; i < listLocal.size(); i++) {
             item[i] = listLocal.get(i).getNomLocal();
         }
-        
-        return new DefaultComboBoxModel(item);
 
+        return new DefaultComboBoxModel(item);
     }
     
     
@@ -1202,56 +1073,22 @@ public class Ajouter extends javax.swing.JFrame {
      * @return ComboBoxModel
      */
     private ComboBoxModel getComboBoxModelSalle(){
-         /*try {
-            // TODO add your handling code here:
-            BDD bd = new BDD();
-            bd.connect();
-            bd.select("SELECT nomLocal FROM Local");
-            ResultSet resultatsL = bd.getResults();
-            String[] locaux = new String[100];
-            String[] Salle = new String[100];
-            int cptl = 0;
-            int cptS = 0;
-            String req;
-            while(resultatsL.next())
-            {
-                locaux[cptl] = resultatsL.getString(1);
-                req = "SELECT nomSalle FROM Salle WHERE lieuSalle = '" +locaux[cptl]+"';";
-                bd.select(req);
-                Salle[cptS] = locaux[cptl];
-                cptS++;
-                while(bd.getResults().next()){
-                    Salle[cptS] = "     ".concat(bd.getResults().getString(1));
-                    cptS++;
-                }
-                cptl++;
-            }
-
-            
-            String[] item = new String[cptS]; 
-            
-
-            
-            
-            for(int i = 0; i<cptS; i++){
-                item[i] = Salle[i];
-                System.out.println(item[i]);
-            }
-            
-            return new DefaultComboBoxModel(item);
-        } catch (SQLException ex) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return new DefaultComboBoxModel();*/
-        
+        int i = 0;
+        int j = 0;
+        int k = 0;
         Controleur ctrl = new Controleur();
         List<Local> listLocal = ctrl.getListeLocaux();
         String[] item = new String[listLocal.size()+ctrl.getListeSalles().size()];
-        for (int i = 0; i < listLocal.size(); i++) {
-            item[i] = listLocal.get(i).getNomLocal();
-            for (int j = 0; j < listLocal.get(i).getListeSalle().size(); j++) {
-                item[i+j+1] = "     ".concat(listLocal.get(i).getListeSalle().get(j).getNomSalle());
+        while (i < listLocal.size()) {
+            item[k] = listLocal.get(i).getNomLocal();
+            k++;
+            while (j < listLocal.get(i).getListeSalle().size()) {
+                item[k] = "     ".concat(listLocal.get(i).getListeSalle().get(j).getNomSalle());
+                j++;
+                k++;
             }
+            j= 0;
+            i++;
         }
         
         return new DefaultComboBoxModel(item);        

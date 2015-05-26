@@ -41,6 +41,10 @@ public class Appareil {
         this.listInterface = new ArrayList<CarteReseau>();
     }
 
+    public List<CarteReseau> getListInterface() {
+        return listInterface;
+    }
+
     /**
      * Getter de l'attribut nomApp de l'appareil.
      * @return le nom de l'appareil sous forme de String.

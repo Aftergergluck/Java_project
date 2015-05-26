@@ -48,6 +48,11 @@ public class Salle {
         this.nomSalle = nomSalle;
     }
 
+    public List<Appareil> getListeApp() {
+        return listeApp;
+    }
+
+    
     /**
      * Setter de l'attribut capa.
      * @param capa nouvelle capacité de la salle.
@@ -96,10 +101,12 @@ public class Salle {
         try {
             BDD bdd = new BDD();
             bdd.connect();
-            if (!bdd.exist("Salle","nomSalle",nomSalle))
+            if (bdd.exist("Salle","nomSalle",nomSalle))
                 bdd.request("UPDATE Salle SET nomsalle = '"+nomSalle+"' AND capasalle = "+capa+" AND nomlocal = '"+nomLocal+"')");
         } catch (SQLException e) {
             Logger.getLogger(Salle.class.getName()).log(Level.SEVERE, null, e);
         }
     }
+    
+    
 }

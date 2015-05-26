@@ -6,7 +6,9 @@
 package com.mycompany.maven_java_project;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -218,13 +220,14 @@ public class BDD {
         for (int i = 0; i < listLocal.size(); i++) {
             try {
                 String nomLocal = listLocal.get(i).getNomLocal();
-                bd.select("SELECT * FROM Salle WHERE nomLocal = '" +nomLocal+"';");
+                bd.select("SELECT * FROM Salle WHERE nomLocal = '"+nomLocal+"';");
                 r = bd.getResults();
                 ArrayList<Salle> listSalle = new ArrayList<Salle>();
                 while (r.next()) {
                     Salle s = new Salle(r.getString(1),r.getInt(2));
                     listSalle.add(s);            
                 }
+                System.out.println("Liste salle :" +listSalle);
                 lienSalle.put(listLocal.get(i), listSalle);
                 
             } catch (SQLException ex) {
@@ -247,7 +250,7 @@ public class BDD {
         for (int i = 0; i < listSalle.size(); i++) {
             try {
                 String nomSalle = listSalle.get(i).getNomSalle();
-                bd.select("SELECT * FROM Appareil WHERE nomSalle = '" +nomSalle+"';");
+                bd.select("SELECT * FROM Appareil WHERE nomSalle = '"+nomSalle+"';");
                 r = bd.getResults();
                 ArrayList<Appareil> listApp = new ArrayList<Appareil>();
                 while (r.next()) {
@@ -255,7 +258,6 @@ public class BDD {
                     listApp.add(a);           
                 }
                 lienAppareil.put(listSalle.get(i), listApp);
-                
             } catch (SQLException ex) {
                 Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
             }
