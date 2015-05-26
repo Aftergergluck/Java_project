@@ -8,6 +8,7 @@ package com.mycompany.maven_java_project;
 import java.awt.FlowLayout;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -174,109 +175,36 @@ public class Observer extends javax.swing.JFrame {
         // Renvoyer le texte modifié
         return text;
     }
-
-    /*private String observerReseauLabel(){
-    String chaine = "<html>";
-        try {
-            // TODO add your handling code here:
-            BDD bd = new BDD();
-            bd.connect();
-            bd.select("SELECT nomLocal FROM Local");
-            ResultSet resultatsL = bd.getResults();
-            String[] locaux = new String[100];
-            String[] Salle = new String[100];
-            String[] App = new String[100];
-            int cptl = 0;
-            int cptS = 0;
-            int cptA = 0;
-            String req;
-            while(resultatsL.next())
-            {
-                locaux[cptl] = resultatsL.getString(1);
-                req = "SELECT nomSalle FROM Salle WHERE lieuSalle = '" +locaux[cptl]+"';";
-                bd.select(req);
-                ResultSet resultS = bd.getResults();
-                bd.select("Select COUNT(nomSalle) From Salle Where lieuSalle = '" +resultatsL.getString(1)+"'");
-                ResultSet count = bd.getResults();
-                count.next();
-                int nb = count.getInt(1);
-                Salle[cptS] = locaux[cptl];
-                cptS++;
-                chaine += "<br><b>"+locaux[cptl]+"     (Nombre de Salle = "+nb+"  )</b><br>";
-                while(resultS.next()){
-                    Salle[cptS] = resultS.getString(1);
-                    bd.select("Select COUNT(nomapp) From Appareil Where lieuappareil = '" +resultS.getString(1)+"' and active='true';");
-                    count = bd.getResults();
-                    count.next();
-                    nb = count.getInt(1);
-                    chaine +="&nbsp;&nbsp;&nbsp;&nbsp;<i>"+ Salle[cptS]+"     (Nombre d'appareils actifs = " +nb+"  )</i><br>";
-                    req = "SELECT * From Appareil WHERE lieuappareil = '" +Salle[cptS]+"' AND active = 'true';";
-                    Salle[cptS] = "     ".concat(Salle[cptS]);
-                    bd.select(req);
-                    ResultSet resultA = bd.getResults();
-                    App[cptA] = locaux[cptl];
-                    cptA++; 
-                    App[cptA] = Salle[cptS];
-                    cptA++;
-                    cptS++;
-                    while(resultA.next()){
-                        App[cptA] = "         ".concat(resultA.getString(1));
-                        bd.select("SELECT adrmacappareil FROM carte_reseau WHERE nomapp = '" +resultA.getString(1)+ "';");
-                        ResultSet adr = bd.getResults();
-                        String adrMac = "";
-                        while(adr.next()){
-                            adrMac = adr.getString(1);
-                        }
-                        if("     Routeur".equals(resultA.getString(2)))
-                        {
-                            chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ App[cptA]+ " &nbsp;&nbsp;&nbsp;&nbsp;(Type = " +resultA.getString(2)+";   @MAC = "+adrMac+";   Firmware = " +resultA.getString(4)+")<br>";                            
-                        }
-                        else{
-                            chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ App[cptA]+ " &nbsp;&nbsp;&nbsp;&nbsp;(Type = " +resultA.getString(2)+";   @MAC = " +adrMac +";   OS = " +resultA.getString(3)+ ";   Firmware = " +resultA.getString(4)+")<br>";                            
-                        }
-                        cptA++;
-                        
-                    }
-                    chaine += "<br>";
-                }
-                cptl++;
-            }
-
-           
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        chaine += "</html>";
-        return chaine;
-        
-        
-        
-        
-    }*/
-    
+   
     
     private String observerReseauLabel(){
         String chaine = "<html>";
         Controleur ctrl = new Controleur();
-        
-                int i = 0;
+        int i = 0;
         int j =0;
         int k = 0;
-        int idx = 0;
         
         List<Local> listLocal = ctrl.getListeLocaux();
         List<Salle> listSalles = ctrl.getListeSalles();
-        String[] item = new String[listLocal.size()+ctrl.getListeSalles().size()+ctrl.getListeApp().size()];
+        List<Appareil> listApp = ctrl.getListeApp();
         while (i < listLocal.size()) {
-            item[idx] = listLocal.get(i).getNomLocal();
-            idx++;
+            chaine += "<br><b>"+listLocal.get(i).getNomLocal()+"     (Nombre de Salle = "+listLocal.get(i).getListeSalle().size()+"  )</b><br>";
             while (j < listLocal.get(i).getListeSalle().size()) {
-                item[idx] = "     ".concat(listLocal.get(i).getListeSalle().get(j).getNomSalle());
-                idx++;
-                while (k < listSalles.get(ctrl.chercherNomListeSalle(listLocal.get(i).getListeSalle().get(j).getNomSalle())).getListeApp().size()) {
-                    item[idx] = "         ".concat(listSalles.get(ctrl.chercherNomListeSalle(listLocal.get(i).getListeSalle().get(j).getNomSalle())).getListeApp().get(k).getNomApp()); // C'est du génie !!!!
-                    idx++;
+                List<Appareil> a = listSalles.get(ctrl.chercherNomListeSalle(listLocal.get(i).getListeSalle().get(j).getNomSalle())).getListeApp();
+                int actif = 0;
+                int inactif = 0;
+                for (int l = 0; l < a.size(); l++) {
+                    if ("true".equals(a.get(l).getActif())) {
+                        actif++;
+                    }
+                    else{
+                        inactif++;
+                    }
+                    
+                }
+                chaine +="&nbsp;&nbsp;&nbsp;&nbsp;<i>"+ listLocal.get(i).getListeSalle().get(j).getNomSalle()+"     (Nombre d'appareils actifs = " +actif+" / inactifs = "+inactif+"  )</i><br>";
+                while (k < a.size()) {
+                    chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ a.get(k).getNomApp()+ " &nbsp;&nbsp;&nbsp;&nbsp;(Type = " +a.get(k).getTypeApp()+";   OS = " +a.get(k).getSystEx()+ ";   Firmware = " +a.get(k).getFirmware()+")<br>";                            
                     k++;
                 }
                 k = 0;
@@ -289,6 +217,10 @@ public class Observer extends javax.swing.JFrame {
         chaine += "</html>";
         return chaine;
     }
+    
+
+    
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabelObservation;
     private javax.swing.JLabel jLabelTitreObs;

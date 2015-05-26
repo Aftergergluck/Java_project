@@ -60,42 +60,6 @@ public class Controleur {
             }
         } 
         
-        for (int i = 0; i < listeSalles.size(); i++) {
-            System.out.println("Salle = "+listeSalles.get(i).getNomSalle());
-            for (int j = 0; j < listeSalles.get(i).getListeApp().size(); j++) {
-                System.out.println("App = "+listeSalles.get(i).getListeApp().get(j).getNomApp());
-            }
-        }
-        
-        for (int i = 0; i < listeLocaux.size(); i++) {
-            System.out.println("local :"+listeLocaux.get(i).getNomLocal());
-            for (int j = 0; j < listeLocaux.get(i).getListeSalle().size(); j++) {
-                System.out.println("Salle : "+listeLocaux.get(i).getListeSalle().get(j).getNomSalle());
-                System.out.println("kmax : "+listeLocaux.get(i).getListeSalle().get(j).getListeApp().size());
-                for (int k = 0; k < listeLocaux.get(i).getListeSalle().get(j).getListeApp().size(); k++) {
-                    System.out.println("App : "+listeLocaux.get(i).getListeSalle().get(j).getListeApp().get(k).getNomApp());
-                }
-                
-            }
-        }
-        
-        int z = 0;
-        int y = 0;
-        int x = 0;
-        Enumeration key = lienAppareil.keys();
-        ArrayList<ArrayList<Appareil>> a = new ArrayList<ArrayList<Appareil>>(lienAppareil.values());
-        while (key.hasMoreElements() && z<10) {
-            System.out.println(key);
-            while (y < a.size()) {
-                while (x < a.get(y).size()) {
-                    System.out.println(" : "+a.get(y).get(x).getNomApp());
-                    x++;
-                }
-                y++;
-            }
-            key.nextElement();
-            z++;
-        }
     }
 
     public List<Local> getListeLocaux() {
@@ -149,13 +113,6 @@ public class Controleur {
      * @return numéro d'index où se trouve le local, ou -1 sinon.
      */
     public int chercherNomListeLocal (String nom) {
-        /*int i = 0;
-        while (!listeLocaux.get(i).getNomLocal().equals(nom)) {i++;}
-        if (listeLocaux.get(i).getNomLocal().equals(nom))
-            return i;
-        else
-            return -1;*/
-
          for (int i = 0; i < listeLocaux.size(); i++) {
             if (listeLocaux.get(i).getNomLocal().equals(nom)){
                 return i;                

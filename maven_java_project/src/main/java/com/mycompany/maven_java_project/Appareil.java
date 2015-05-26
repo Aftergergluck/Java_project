@@ -41,6 +41,20 @@ public class Appareil {
         this.listInterface = new ArrayList<CarteReseau>();
     }
 
+    public String getActif() {
+        return actif;
+    }
+
+    public String getSystEx() {
+        return systEx;
+    }
+
+    public String getFirmware() {
+        return firmware;
+    }
+
+    
+    
     public List<CarteReseau> getListInterface() {
         return listInterface;
     }
