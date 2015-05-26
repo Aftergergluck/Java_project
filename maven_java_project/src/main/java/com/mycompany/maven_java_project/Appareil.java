@@ -163,6 +163,7 @@ public class Appareil {
     
     /**
      * Modifier dans la base de données un appareil existant.
+     * @param ancienNom nom de l'appareil avant modification.
      * @param nomSalle nom de la salle où l'appareil est assigné.
      */
     public void modifAppBDD (String ancienNom, String nomSalle) {

@@ -104,6 +104,7 @@ public class Local {
     
     /**
      * Modifier un local existant dans la base de données.
+     * @param ancienNom nom du local avant modification.
      */
     public void modifLocalBDD (String ancienNom) {
         BDD bdd = new BDD();

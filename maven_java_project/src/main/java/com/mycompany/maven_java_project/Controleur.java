@@ -6,12 +6,10 @@ package com.mycompany.maven_java_project;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.applet.Main;
 
 /**
  * Controleur gérant toute la logique applicative à partir des choix de l'utilisateur
@@ -200,7 +198,7 @@ public class Controleur {
     
     /**
      * Modifier un ou plusieurs paramètres d'un appareil.
-     * @param a l'appareil à modifier.
+     * @param ancienNom le nom de l'appareil avant modification.
      * @param nouvNom le nouveau nom de l'appareil (peut être identique à nom).
      * @param emp la salle dans laquelle se trouve l'appareil.
      * @param sys le système d'exploitation de l'appareil.
@@ -226,7 +224,7 @@ public class Controleur {
     
     /**
      * Modifier un ou plusieurs paramètres d'une salle
-     * @param s salle à modifier.
+     * @param ancienNom nom de la salle avant modification.
      * @param nom nom de la salle.
      * @param emp local contenant la salle.
      * //@param capa nombre d'appareil pouvant être ajouté à la salle.

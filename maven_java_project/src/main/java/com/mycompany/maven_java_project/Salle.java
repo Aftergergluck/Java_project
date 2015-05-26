@@ -95,6 +95,7 @@ public class Salle {
     
     /**
      * Modifier dans la base de données une salle existante.
+     * @param ancienNom nom de la salle avant modification.
      * @param nomLocal nom du local où est affectée la salle.
      */
     public void modifSalleBDD (String ancienNom, String nomLocal) {

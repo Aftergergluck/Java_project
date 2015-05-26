@@ -6,9 +6,7 @@
 package com.mycompany.maven_java_project;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;

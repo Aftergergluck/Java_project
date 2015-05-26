@@ -6,11 +6,6 @@
 package com.mycompany.maven_java_project;
 import javax.swing.*;
 import java.awt.*;
-import javax.swing.border.Border;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.List;
 
 
