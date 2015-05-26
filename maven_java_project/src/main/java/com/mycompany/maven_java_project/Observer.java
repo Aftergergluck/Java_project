@@ -8,6 +8,7 @@ package com.mycompany.maven_java_project;
 import java.awt.FlowLayout;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
@@ -174,7 +175,7 @@ public class Observer extends javax.swing.JFrame {
         return text;
     }
 
-    private String observerReseauLabel(){
+    /*private String observerReseauLabel(){
     String chaine = "<html>";
         try {
             // TODO add your handling code here:
@@ -252,6 +253,41 @@ public class Observer extends javax.swing.JFrame {
         
         
         
+    }*/
+    
+    
+    private String observerReseauLabel(){
+        String chaine = "<html>";
+        Controleur ctrl = new Controleur();
+        
+                int i = 0;
+        int j =0;
+        int k = 0;
+        int idx = 0;
+        
+        List<Local> listLocal = ctrl.getListeLocaux();
+        List<Salle> listSalles = ctrl.getListeSalles();
+        String[] item = new String[listLocal.size()+ctrl.getListeSalles().size()+ctrl.getListeApp().size()];
+        while (i < listLocal.size()) {
+            item[idx] = listLocal.get(i).getNomLocal();
+            idx++;
+            while (j < listLocal.get(i).getListeSalle().size()) {
+                item[idx] = "     ".concat(listLocal.get(i).getListeSalle().get(j).getNomSalle());
+                idx++;
+                while (k < listSalles.get(ctrl.chercherNomListeSalle(listLocal.get(i).getListeSalle().get(j).getNomSalle())).getListeApp().size()) {
+                    item[idx] = "         ".concat(listSalles.get(ctrl.chercherNomListeSalle(listLocal.get(i).getListeSalle().get(j).getNomSalle())).getListeApp().get(k).getNomApp()); // C'est du génie !!!!
+                    idx++;
+                    k++;
+                }
+                k = 0;
+                j++;
+            }
+            j = 0;
+            i++;
+        }
+        
+        chaine += "</html>";
+        return chaine;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabelObservation;

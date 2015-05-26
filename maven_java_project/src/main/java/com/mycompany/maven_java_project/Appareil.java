@@ -45,6 +45,12 @@ public class Appareil {
         return listInterface;
     }
 
+    public String getTypeApp() {
+        return typeApp;
+    }
+
+    
+    
     /**
      * Getter de l'attribut nomApp de l'appareil.
      * @return le nom de l'appareil sous forme de String.
@@ -145,15 +151,13 @@ public class Appareil {
      * Modifier dans la base de données un appareil existant.
      * @param nomSalle nom de la salle où l'appareil est assigné.
      */
-    public void modifAppBDD (String nomSalle) {
-        try {
-            BDD bdd = new BDD();
-            bdd.connect();
-            if (bdd.exist("Appareil","nomApp",nomApp))
-                bdd.request("UPDATE Appareil SET nomApp='"+nomApp+"' AND typeappareil='"+typeApp+"' AND sysexpappareil='"+systEx+"' AND nomfirmware='"+firmware+"' AND active="+actif+" AND nomSalle='"+nomSalle+"';");
-        } catch (SQLException e) {
-            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, e);
-        }
+    public void modifAppBDD (String ancienNom, String nomSalle) {
+        BDD bdd = new BDD();
+        bdd.connect();
+        bdd.request("ALTER TABLE appareil DISABLE TRIGGER ALL");
+        bdd.request("UPDATE Appareil SET nomApp='"+nomApp+"', typeappareil='"+typeApp+"', systexpappareil='"+systEx+"', nomfirmware='"+firmware+"', active='"+actif+"', nomSalle='"+nomSalle+"' WHERE nomapp ='"+ancienNom+"';");
+        bdd.request("ALTER TABLE appareil ENABLE TRIGGER ALL");
+        bdd.request("UPDATE carte_reseau SET nomapp ='"+nomApp+"' WHERE nomapp ='"+ancienNom+"'");
     }
     
 }

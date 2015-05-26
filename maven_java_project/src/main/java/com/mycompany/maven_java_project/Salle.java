@@ -97,15 +97,13 @@ public class Salle {
      * Modifier dans la base de données une salle existante.
      * @param nomLocal nom du local où est affectée la salle.
      */
-    public void modifSalleBDD (String nomLocal) {
-        try {
-            BDD bdd = new BDD();
-            bdd.connect();
-            if (bdd.exist("Salle","nomSalle",nomSalle))
-                bdd.request("UPDATE Salle SET nomsalle = '"+nomSalle+"' AND capasalle = "+capa+" AND nomlocal = '"+nomLocal+"')");
-        } catch (SQLException e) {
-            Logger.getLogger(Salle.class.getName()).log(Level.SEVERE, null, e);
-        }
+    public void modifSalleBDD (String ancienNom, String nomLocal) {
+        BDD bdd = new BDD();
+        bdd.connect();
+        bdd.request("ALTER TABLE salle DISABLE TRIGGER ALL");
+        bdd.request("UPDATE Salle SET nomsalle = '"+nomSalle+"', capasalle = "+capa+", nomlocal = '"+nomLocal+"' WHERE nomsalle ='"+ancienNom+"'");
+        bdd.request("ALTER TABLE salle ENABLE TRIGGER ALL");
+        bdd.request("UPDATE appareil SET nomsalle = '"+nomSalle+"' WHERE nomsalle ='"+ancienNom+"'");
     }
     
     

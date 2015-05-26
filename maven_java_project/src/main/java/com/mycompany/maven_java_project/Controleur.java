@@ -122,12 +122,11 @@ public class Controleur {
      * @return numéro d'index où se trouve l'appareil, ou -1 sinon.
      */
     public int chercherNomListeApp (String nom) {
-        int i = 0;
-        while (!listeApp.get(i).getNomApp().equals(nom)) {i++;}
-        if (listeApp.get(i).getNomApp().equals(nom))
-            return i;
-        else
-            return -1;
+        for (int i = 0; i < listeApp.size(); i++) {
+            if (listeApp.get(i).getNomApp().equals(nom))
+                return i;
+        }
+        return -1;
     }
     
     /**
@@ -136,12 +135,7 @@ public class Controleur {
      * @return numéro d'index où se trouve la salle, ou -1 sinon.
      */
     public int chercherNomListeSalle (String nom) {
-        /*int i = 0;
-        while (!listeSalles.get(i).getNomSalle().equals(nom)) {i++;}
-        if (listeSalles.get(i).getNomSalle().equals(nom))
-            return i;
-        else
-            return -1;*/
+
         for (int i = 0; i < listeSalles.size(); i++) {
             if (listeSalles.get(i).getNomSalle().equals(nom))
                 return i;
@@ -255,20 +249,22 @@ public class Controleur {
      * @param sys le système d'exploitation de l'appareil.
      * @param firm le nom du firmware de l'appareil.
      */
-    public void modifierApp (Appareil a, String nouvNom, String emp, String sys, String firm) {
+    public void modifierApp (String ancienNom, String nouvNom, String emp, String sys, String firm) {
+        Appareil a = listeApp.get(chercherNomListeApp(ancienNom));
         try {
             BDD bd = new BDD();
             bd.connect();
             bd.select("SELECT nomSalle FROM Appareil WHERE nomapp = '"+a.getNomApp()+"'");
-            listeSalles.get(chercherNomListeLocal(bd.getResults().getString(1))).desaffecterApp(a);
+            bd.getResults().next();
+            listeSalles.get(chercherNomListeSalle(bd.getResults().getString(1))).desaffecterApp(a);
         } catch (SQLException e) {
             Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, e);
         }
-        listeSalles.get(chercherNomListeApp(emp)).affecterApp(a);
+        listeSalles.get(chercherNomListeSalle(emp)).affecterApp(a);
         a.setNomApp(nouvNom);
         a.setSystEx(sys);
         a.setFirmware(firm);
-        a.modifAppBDD(emp);
+        a.modifAppBDD(ancienNom, emp);
     }
     
     /**
@@ -278,19 +274,20 @@ public class Controleur {
      * @param emp local contenant la salle.
      * //@param capa nombre d'appareil pouvant être ajouté à la salle.
      */
-    public void modifierSalle (Salle s, String nom, String emp/*, int capa*/) {
+    public void modifierSalle (String ancienNom, String nom, String emp) {
+        Salle s = listeSalles.get(chercherNomListeSalle(ancienNom));
         try {
             BDD bd = new BDD();
             bd.connect();
             bd.select("SELECT nomLocal FROM Salle WHERE nomSalle = '"+s.getNomSalle()+"'");
+            bd.getResults().next();
             listeLocaux.get(chercherNomListeLocal(bd.getResults().getString(1))).desaffecterSalle(s);
         } catch (SQLException e) {
             Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, e);
         }
-        listeLocaux.get(chercherNomListeApp(emp)).affecterSalle(s);
+        listeLocaux.get(chercherNomListeLocal(emp)).affecterSalle(s);
         s.setNomSalle(nom);
-        //s.setCapa(capa);
-        s.modifSalleBDD(emp);
+        s.modifSalleBDD(ancienNom,emp);
     }
     
     /**
