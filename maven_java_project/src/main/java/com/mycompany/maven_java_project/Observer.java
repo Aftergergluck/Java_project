@@ -183,7 +183,8 @@ public class Observer extends javax.swing.JFrame {
         int i = 0;
         int j =0;
         int k = 0;
-        
+        BDD bd = new BDD();
+        bd.connect();
         List<Local> listLocal = ctrl.getListeLocaux();
         List<Salle> listSalles = ctrl.getListeSalles();
         List<Appareil> listApp = ctrl.getListeApp();
@@ -194,7 +195,8 @@ public class Observer extends javax.swing.JFrame {
                 int actif = 0;
                 int inactif = 0;
                 for (int l = 0; l < a.size(); l++) {
-                    if ("true".equals(a.get(l).getActif())) {
+                    System.out.println(a.get(l).getActif());
+                    if ("t".equals(a.get(l).getActif())) {
                         actif++;
                     }
                     else{
@@ -204,8 +206,15 @@ public class Observer extends javax.swing.JFrame {
                 }
                 chaine +="&nbsp;&nbsp;&nbsp;&nbsp;<i>"+ listLocal.get(i).getListeSalle().get(j).getNomSalle()+"     (Nombre d'appareils actifs = " +actif+" / inactifs = "+inactif+"  )</i><br>";
                 while (k < a.size()) {
-                    chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ a.get(k).getNomApp()+ " &nbsp;&nbsp;&nbsp;&nbsp;(Type = " +a.get(k).getTypeApp()+";   OS = " +a.get(k).getSystEx()+ ";   Firmware = " +a.get(k).getFirmware()+")<br>";                            
-                    k++;
+                    try {
+                        bd.select("SELECT adrmacappareil FROM carte_reseau WHERE nomapp ='"+a.get(k).getNomApp()+"'");
+                        ResultSet r = bd.getResults();
+                        r.next();
+                        chaine += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+ a.get(k).getNomApp()+ " &nbsp;&nbsp;&nbsp;&nbsp;(Type = " +a.get(k).getTypeApp()+"; @MAC = '" +r.getString(1)+"';   OS = " +a.get(k).getSystEx()+ ";   Firmware = " +a.get(k).getFirmware()+")<br>";
+                        k++;
+                    } catch (SQLException ex) {
+                        Logger.getLogger(Observer.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
                 k = 0;
                 j++;
