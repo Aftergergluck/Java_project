@@ -5,6 +5,7 @@
 package com.mycompany.maven_java_project;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,8 +31,15 @@ public class Local {
         this.nomLocal = nomLocal;
         this.capa = capa;
         this.adr = adr;
+        this.listeSalle = new ArrayList<Salle>();
     }
 
+    public List<Salle> getListeSalle() {
+        return listeSalle;
+    }
+
+    
+    
     /**
      * Getter de l'attribut nomLocal.
      * @return le nom du local.
@@ -90,7 +98,7 @@ public class Local {
             if (!bdd.exist("Local","nomLocal",nomLocal))
                 bdd.request("INSERT INTO Local VALUES ('"+nomLocal+"','"+adr+"','"+capa+"')");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Local.class.getName()).log(Level.SEVERE, null, e);
         }
     }
     
@@ -104,7 +112,7 @@ public class Local {
             if (!bdd.exist("Local","nomLocal",nomLocal))
                 bdd.request("UPDATE local SET nomlocal = '"+nomLocal+"' AND lieulocal = '"+adr+"' AND nbrsalle = '"+capa+"')");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Local.class.getName()).log(Level.SEVERE, null, e);
         }
     }
     

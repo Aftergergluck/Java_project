@@ -24,6 +24,8 @@ public class Modifier extends javax.swing.JFrame {
      */
     public Modifier() {
         initComponents();
+        Controleur ctrl = new Controleur();
+
     }
 
     /**

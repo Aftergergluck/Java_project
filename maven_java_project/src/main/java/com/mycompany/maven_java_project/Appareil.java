@@ -21,7 +21,7 @@ public class Appareil {
     private String systEx;
     private final String typeApp;
     private String firmware;
-    private boolean actif;
+    private String actif;
     private List<CarteReseau> listInterface;
 
     /**
@@ -32,12 +32,13 @@ public class Appareil {
      * @param firmware nom du firmware de l'appareil.
      * @param actif état de l'appareil (true = actif, false = inactif).
      */
-    public Appareil(String nomApp, String systEx, String typeApp, String firmware, boolean actif) {
+    public Appareil(String nomApp, String systEx, String typeApp, String firmware, String actif) {
         this.nomApp = nomApp;
         this.systEx = systEx;
         this.typeApp = typeApp;
         this.firmware = firmware;
         this.actif = actif;
+        this.listInterface = new ArrayList<CarteReseau>();
     }
 
     /**
@@ -60,7 +61,7 @@ public class Appareil {
      * Setter de l'état de l'appareil.
      * @param actif booléen représentant l'état d'activité de l'appareil.
      */
-    public void setActif(boolean actif) {
+    public void setActif(String actif) {
         this.actif = actif;
     }
 
@@ -132,7 +133,7 @@ public class Appareil {
             if (!bdd.exist("Appareil","nomApp",nomApp))
                 bdd.request("INSERT INTO Appareil VALUES ('"+nomApp+"','"+typeApp+"','"+systEx+"','"+firmware+"',"+actif+",'"+nomSalle+"')");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, e);
         }
     }
     
@@ -147,7 +148,7 @@ public class Appareil {
             if (bdd.exist("Appareil","nomApp",nomApp))
                 bdd.request("UPDATE Appareil SET nomApp='"+nomApp+"' AND typeappareil='"+typeApp+"' AND sysexpappareil='"+systEx+"' AND nomfirmware='"+firmware+"' AND active="+actif+" AND nomSalle='"+nomSalle+"';");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, e);
         }
     }
     

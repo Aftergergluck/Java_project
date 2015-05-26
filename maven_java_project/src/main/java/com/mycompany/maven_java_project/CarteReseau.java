@@ -52,7 +52,7 @@ public class CarteReseau {
             if (!bdd.exist("Carte_reseau","adrmacappareil",addrMAC))
                 bdd.request("INSERT INTO carte_reseau VALUES ('"+addrMAC+"','"+nomApp+"')");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(CarteReseau.class.getName()).log(Level.SEVERE, null, e);
         }
     }
     
@@ -67,7 +67,7 @@ public class CarteReseau {
             if (!bdd.exist("Carte_reseau","adrmacappareil",addrMAC))
                 bdd.request("UPDATE carte_reseau SET adrmacappareil = '"+addrMAC+"' AND nomapp = '"+nomApp+"'");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(CarteReseau.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 }

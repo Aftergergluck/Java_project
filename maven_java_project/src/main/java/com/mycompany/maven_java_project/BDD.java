@@ -6,6 +6,7 @@
 package com.mycompany.maven_java_project;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -129,7 +130,7 @@ public class BDD {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
     } 
@@ -147,12 +148,12 @@ public class BDD {
             ResultSet r = bd.getResults();
 
             while (r.next()) {
-                Appareil a = new Appareil(r.getString(1),r.getString(3),r.getString(2),r.getString(4),r.getBoolean(5));
+                Appareil a = new Appareil(r.getString(1),r.getString(3),r.getString(2),r.getString(4),r.getString(5));
                 list.add(a);
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
     } 
@@ -175,7 +176,7 @@ public class BDD {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
     } 
@@ -198,9 +199,97 @@ public class BDD {
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(Appareil.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
         }
         return list;
+    }
+ 
+    
+    /**
+     * Créé une hashtable qui contient les salles affectées à chaque local
+     * @param listLocal Liste de la totalité des locaux
+     * @return Hashtable(local, salle)
+     */
+    public Hashtable<Local, ArrayList<Salle>> chargerLienSalle(List<Local> listLocal){
+        Hashtable<Local, ArrayList<Salle>> lienSalle = new Hashtable<Local, ArrayList<Salle>>();
+        BDD bd = new BDD();
+        bd.connect();
+        ResultSet r;
+        for (int i = 0; i < listLocal.size(); i++) {
+            try {
+                String nomLocal = listLocal.get(i).getNomLocal();
+                bd.select("SELECT * FROM Salle WHERE nomLocal = '" +nomLocal+"';");
+                r = bd.getResults();
+                ArrayList<Salle> listSalle = new ArrayList<Salle>();
+                while (r.next()) {
+                    Salle s = new Salle(r.getString(1),r.getInt(2));
+                    listSalle.add(s);            
+                }
+                lienSalle.put(listLocal.get(i), listSalle);
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return lienSalle;
+    }
+
+    /**
+     * Créé une hashtable qui contient les appareils affectées à chaque salle
+     * @param listSalle
+     * @return hashtable(salle, appareil)
+     */
+    public Hashtable<Salle, ArrayList<Appareil>> chargerLienAppareil(List<Salle> listSalle){
+        Hashtable<Salle, ArrayList<Appareil>> lienAppareil = new Hashtable<Salle, ArrayList<Appareil>>();
+        BDD bd = new BDD();
+        bd.connect();
+        ResultSet r;
+        for (int i = 0; i < listSalle.size(); i++) {
+            try {
+                String nomSalle = listSalle.get(i).getNomSalle();
+                bd.select("SELECT * FROM Appareil WHERE nomSalle = '" +nomSalle+"';");
+                r = bd.getResults();
+                ArrayList<Appareil> listApp = new ArrayList<Appareil>();
+                while (r.next()) {
+                    Appareil a = new Appareil(r.getString(1),r.getString(3),r.getString(2),r.getString(4),r.getString(5));
+                    listApp.add(a);           
+                }
+                lienAppareil.put(listSalle.get(i), listApp);
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return lienAppareil;
+    }
+
+    /**
+     * Créé une hashtable qui contient les cartes réseaux affectées à chaque appareil
+     * @param listApp
+     * @return hashtable(appareil, carte)
+     */
+    public Hashtable<Appareil, ArrayList<CarteReseau>> chargerLienCarte(List<Appareil> listApp){
+        Hashtable<Appareil, ArrayList<CarteReseau>> lienCarte = new Hashtable<Appareil, ArrayList<CarteReseau>>();
+        BDD bd = new BDD();
+        bd.connect();
+        ResultSet r;
+        for (int i = 0; i < listApp.size(); i++) {
+            try {
+                String nomApp = listApp.get(i).getNomApp();
+                bd.select("SELECT * FROM Carte_reseau WHERE nomapp = '" +nomApp+"';");
+                r = bd.getResults();
+                ArrayList<CarteReseau> listCarte = new ArrayList<CarteReseau>();
+                while (r.next()) {
+                    CarteReseau cr = new CarteReseau(r.getString(1));
+                    listCarte.add(cr);          
+                }
+                lienCarte.put(listApp.get(i), listCarte);
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return lienCarte;
     }
     
 }

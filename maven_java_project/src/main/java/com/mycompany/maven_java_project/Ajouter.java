@@ -8,9 +8,10 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.Border;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import java.util.List;
 
 
 /**
@@ -22,6 +23,8 @@ public class Ajouter extends javax.swing.JFrame {
     /**
      * Creates new form Ajouter
      */
+    
+    
     public Ajouter()  {
         initComponents();
     }
@@ -695,12 +698,19 @@ public class Ajouter extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         if(this.verifEntreeLocal()){
-            BDD bd = new BDD();
-            bd.connect(); 
+           /* BDD bd = new BDD();
+            bd.connect(); */
+            Controleur ctrl = new Controleur();
             String nomLoc = jTextFieldNameLocal.getText();
             String addrLocal = jTextFieldAdresseLocal.getText();
             int nbSLocal = (Integer)jSpinnerNbSalleLocal.getValue(); 
-            try {
+            ctrl.ajouterLocal(nomLoc, nbSLocal, addrLocal);
+            javax.swing.JOptionPane.showMessageDialog(null,"Le local " +nomLoc+ " a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE);            
+            Principal princ = new Principal();
+            princ.setLocationRelativeTo(null);
+            this.setVisible(false);
+            princ.setVisible(true);
+            /*try {
                 if(bd.exist("Local", "nomLocal", nomLoc)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom du local est déjà présent dans la base", "Erreur Saisie nom local", JOptionPane.ERROR_MESSAGE); 
                     jTextFieldNameLocal.requestFocus(); 
@@ -717,7 +727,7 @@ public class Ajouter extends javax.swing.JFrame {
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
 
         }
         else{
@@ -734,12 +744,19 @@ public class Ajouter extends javax.swing.JFrame {
 
     private void jButtonValidSalleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonValidSalleActionPerformed
         if(this.verifEntreeSalle()){
-            try {
+            /*try {
                 BDD bd = new BDD();
-                bd.connect();
+                bd.connect();*/
+                Controleur ctrl = new Controleur();
                 String nomS = jTextFieldNameSalle.getText();
                 String valueBox = (String)jComboBoxEmplacementSalle.getSelectedItem();
-                if(bd.exist("Salle", "nomSalle", nomS)){
+                ctrl.ajouterSalle(nomS, 10, valueBox);
+                javax.swing.JOptionPane.showMessageDialog(null,"La salle " +nomS+ " dans le local " +valueBox +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+                Principal princ = new Principal();
+                princ.setLocationRelativeTo(null);
+                this.setVisible(false);
+                princ.setVisible(true);                  
+               /* if(bd.exist("Salle", "nomSalle", nomS)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la salle est déjà présent dans la base", "Erreur Saisie nom salle", JOptionPane.ERROR_MESSAGE); 
                     jTextFieldNameSalle.requestFocus();                     
                 }
@@ -754,7 +771,7 @@ public class Ajouter extends javax.swing.JFrame {
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
         }
     }//GEN-LAST:event_jButtonValidSalleActionPerformed
 
@@ -979,9 +996,10 @@ public class Ajouter extends javax.swing.JFrame {
      */
     private void ajouterOrdi(){
         if(this.verifEntreeOrdi()){
-            try {
+            /*try {
                 BDD bd = new BDD();
-                bd.connect();
+                bd.connect();*/
+                Controleur ctrl = new Controleur();
                 String nomO = jTextFieldNameOrdi.getText();
                 String valueBoxOS = (String)jComboBoxOsOrdi.getSelectedItem();
                 String valueBoxEmp = (String)jComboBoxEmplacement.getSelectedItem();
@@ -990,7 +1008,14 @@ public class Ajouter extends javax.swing.JFrame {
                 String valueActive = (String)jComboBoxActive.getSelectedItem();
                 String typeApp = (String)jComboBoxSelection.getSelectedItem();
                 String adrMac = jTextFieldMacOrdi.getText();
-                if(bd.exist("Appareil", "nomapp", nomO)){
+                ctrl.ajouterApp(nomO, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
+                ctrl.ajouterCarteReseau(adrMac, nomO);
+                javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomO +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+                Principal princ = new Principal();
+                princ.setLocationRelativeTo(null);
+                this.setVisible(false);
+                princ.setVisible(true);                  
+                /*if(bd.exist("Appareil", "nomapp", nomO)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom de l'ordinateur est déjà présent dans la base", "Erreur Saisie nom ordi", JOptionPane.ERROR_MESSAGE); 
                     jTextFieldNameOrdi.requestFocus();                     
                 }
@@ -1004,10 +1029,10 @@ public class Ajouter extends javax.swing.JFrame {
                     princ.setLocationRelativeTo(null);
                     this.setVisible(false);
                     princ.setVisible(true);                    
-                }
-            } catch (SQLException ex) {
+                }*/
+            /*} catch (SQLException ex) {
                 Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
         }              
     }
     
@@ -1018,9 +1043,10 @@ public class Ajouter extends javax.swing.JFrame {
      */
     private void ajouterTablette(){
          if(this.verifEntreeTablette()){
-            try {
+            /*try {
                 BDD bd = new BDD();
-                bd.connect();
+                bd.connect();*/
+                Controleur ctrl = new Controleur();
                 String nomT = jTextFieldNameTab.getText();
                 String valueBoxOS = (String)jComboBoxOsTab.getSelectedItem();
                 String valueBoxEmp = (String)jComboBoxEmplacementTab.getSelectedItem();
@@ -1029,7 +1055,14 @@ public class Ajouter extends javax.swing.JFrame {
                 String valueActive = (String)jComboBoxActiveTab.getSelectedItem();
                 String typeApp = (String)jComboBoxSelection.getSelectedItem();
                 String adrMac = jTextFieldMacTab.getText();
-                if(bd.exist("Appareil", "nomapp", nomT)){
+                ctrl.ajouterApp(nomT, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
+                ctrl.ajouterCarteReseau(adrMac, nomT);
+                javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomT +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+                Principal princ = new Principal();
+                princ.setLocationRelativeTo(null);
+                this.setVisible(false);
+                princ.setVisible(true); 
+               /* if(bd.exist("Appareil", "nomapp", nomT)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom de la tablette est déjà présent dans la base", "Erreur Saisie nom tablette", JOptionPane.ERROR_MESSAGE); 
                     jTextFieldNameOrdi.requestFocus();                     
                 }
@@ -1046,7 +1079,7 @@ public class Ajouter extends javax.swing.JFrame {
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
         }        
     }
     
@@ -1057,9 +1090,10 @@ public class Ajouter extends javax.swing.JFrame {
      */
     private void ajouterRouteur(){
           if(this.verifEntreeRouteur()){
-            try {
+           /* try {
                 BDD bd = new BDD();
-                bd.connect();
+                bd.connect();*/
+                Controleur ctrl = new Controleur();
                 String nomR = jTextFieldNameRouteur.getText();
                 String valueBoxOS = " ";
                 String valueBoxEmp = (String)jComboBoxEmplacementRouteur.getSelectedItem();
@@ -1068,7 +1102,14 @@ public class Ajouter extends javax.swing.JFrame {
                 String valueActive = (String)jComboBoxActiveRouteur.getSelectedItem();
                 String typeApp = (String)jComboBoxSelection.getSelectedItem();
                 String adrMac = jTextFieldMacRouteur.getText();
-                if(bd.exist("Appareil", "nomapp", nomR)){
+                ctrl.ajouterApp(nomR, valueBoxOS, typeApp, nomFirm, valueActive, valueBoxEmp);
+                ctrl.ajouterCarteReseau(adrMac, nomR);
+                javax.swing.JOptionPane.showMessageDialog(null,"L'appareil " +nomR +" a bien été ajouté dans la base !", "Succès", JOptionPane.PLAIN_MESSAGE); 
+                Principal princ = new Principal();
+                princ.setLocationRelativeTo(null);
+                this.setVisible(false);
+                princ.setVisible(true);   
+                /*if(bd.exist("Appareil", "nomapp", nomR)){
                     javax.swing.JOptionPane.showMessageDialog(null,"Le nom du routeur est déjà présent dans la base", "Erreur Saisie nom routeur", JOptionPane.ERROR_MESSAGE); 
                     jTextFieldNameOrdi.requestFocus();                     
                 }
@@ -1085,7 +1126,7 @@ public class Ajouter extends javax.swing.JFrame {
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
         }        
     }
     
@@ -1119,7 +1160,7 @@ public class Ajouter extends javax.swing.JFrame {
      */
     private ComboBoxModel getComboBoxModelLocal() {
     
-        try {
+       /* try {
             // TODO add your handling code here:
             BDD bd = new BDD();
             bd.connect();
@@ -1142,7 +1183,15 @@ public class Ajouter extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return new DefaultComboBoxModel();
+        return new DefaultComboBoxModel();*/
+        Controleur ctrl = new Controleur();
+        List<Local> listLocal = ctrl.getListeLocaux();
+        String[] item = new String[listLocal.size()];
+        for (int i = 0; i < listLocal.size(); i++) {
+            item[i] = listLocal.get(i).getNomLocal();
+        }
+        
+        return new DefaultComboBoxModel(item);
 
     }
     
@@ -1153,7 +1202,7 @@ public class Ajouter extends javax.swing.JFrame {
      * @return ComboBoxModel
      */
     private ComboBoxModel getComboBoxModelSalle(){
-         try {
+         /*try {
             // TODO add your handling code here:
             BDD bd = new BDD();
             bd.connect();
@@ -1193,7 +1242,19 @@ public class Ajouter extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return new DefaultComboBoxModel();
+        return new DefaultComboBoxModel();*/
+        
+        Controleur ctrl = new Controleur();
+        List<Local> listLocal = ctrl.getListeLocaux();
+        String[] item = new String[listLocal.size()+ctrl.getListeSalles().size()];
+        for (int i = 0; i < listLocal.size(); i++) {
+            item[i] = listLocal.get(i).getNomLocal();
+            for (int j = 0; j < listLocal.get(i).getListeSalle().size(); j++) {
+                item[i+j+1] = "     ".concat(listLocal.get(i).getListeSalle().get(j).getNomSalle());
+            }
+        }
+        
+        return new DefaultComboBoxModel(item);        
 
 }       
            

@@ -27,6 +27,7 @@ public class Observer extends javax.swing.JFrame {
      */
     public Observer() {
         initComponents();
+        Controleur ctrl = new Controleur();
     }
 
     /**

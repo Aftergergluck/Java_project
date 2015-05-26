@@ -5,6 +5,7 @@
 package com.mycompany.maven_java_project;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,6 +29,7 @@ public class Salle {
     public Salle(String nomSalle, int capa) {
         this.nomSalle = nomSalle;
         this.capa = capa;
+        this.listeApp = new ArrayList<Appareil>();
     }
 
     /**
@@ -80,9 +82,9 @@ public class Salle {
             BDD bdd = new BDD();
             bdd.connect();
             if (!bdd.exist("Salle","nomSalle",nomSalle))
-                bdd.request("INSERT INTO Salle VALUES ('"+nomSalle+"','"+nomLocal+"')");
+                bdd.request("INSERT INTO Salle VALUES ('"+nomSalle+"',"+capa+",'"+nomLocal+"')");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Salle.class.getName()).log(Level.SEVERE, null, e);
         }
     }
     
@@ -95,9 +97,9 @@ public class Salle {
             BDD bdd = new BDD();
             bdd.connect();
             if (!bdd.exist("Salle","nomSalle",nomSalle))
-                bdd.request("UPDATE Salle SET nomsalle = '"+nomSalle+"' AND nomlocal = '"+nomLocal+"')");
+                bdd.request("UPDATE Salle SET nomsalle = '"+nomSalle+"' AND capasalle = "+capa+" AND nomlocal = '"+nomLocal+"')");
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Salle.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 }

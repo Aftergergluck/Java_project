@@ -1,5 +1,4 @@
-﻿
-CREATE TABLE Local(
+﻿CREATE TABLE Local(
         nomLocal  Varchar (25) NOT NULL ,
         lieuLocal Varchar (25) NOT NULL ,
         nbrSalle  int,
@@ -11,8 +10,8 @@ CREATE TABLE Local(
 
 CREATE TABLE Salle(
         nomSalle    Varchar (25) NOT NULL ,
-        lieuSalle   Varchar (32) NOT NULL ,
-        nomLocal    Varchar  (32) NOT NULL,
+	capaSalle   int NOT NULL,
+	nomLocal    Varchar  (32) NOT NULL,
         PRIMARY KEY (nomSalle )
 );
 
@@ -25,7 +24,6 @@ CREATE TABLE Appareil(
         SystExpAppareil Varchar (32) ,
         Nomfirmware     Varchar (32) NOT NULL ,
         Active          Bool ,
-        lieuAppareil    Varchar (32) ,
         nomSalle        Varchar (32) NOT NULL ,
         PRIMARY KEY (nomApp )
 );

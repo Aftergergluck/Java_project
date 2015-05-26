@@ -5,9 +5,12 @@
 package com.mycompany.maven_java_project;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import sun.applet.Main;
 
 /**
  * Controleur gérant toute la logique applicative à partir des choix de l'utilisateur
@@ -23,12 +26,54 @@ public class Controleur {
     private List<CarteReseau> listeCarte;
 
     public Controleur() {
+        Hashtable<Local, ArrayList<Salle>> lienSalle = new Hashtable<Local, ArrayList<Salle>>(); 
+        Hashtable<Salle, ArrayList<Appareil>> lienAppareil = new Hashtable<Salle, ArrayList<Appareil>>();
+        Hashtable<Appareil, ArrayList<CarteReseau>> lienCarte = new Hashtable<Appareil, ArrayList<CarteReseau>>();    
         BDD bdd = new BDD();
         listeCarte = bdd.chargerListeCartes();
         listeApp = bdd.chargerListeApp();
         listeSalles = bdd.chargerListeSalle();
         listeLocaux = bdd.chargerListeLocal();
+        
+        lienSalle = bdd.chargerLienSalle(listeLocaux);
+        for (int i = 0; i < listeLocaux.size(); i++) {
+            for (int j = 0; j < lienSalle.get(listeLocaux.get(i)).size(); j++) {
+                listeLocaux.get(i).affecterSalle(lienSalle.get(listeLocaux.get(i)).get(j));
+            }
+        }
+
+        lienAppareil = bdd.chargerLienAppareil(listeSalles);
+        for (int i = 0; i < listeSalles.size(); i++) {
+            for (int j = 0; j < lienAppareil.get(listeSalles.get(i)).size(); j++) {
+                listeSalles.get(i).affecterApp(lienAppareil.get(listeSalles.get(i)).get(j));
+            }
+        }        
+        
+        lienCarte = bdd.chargerLienCarte(listeApp);
+        for (int i = 0; i < listeApp.size(); i++) {
+            for (int j = 0; j < lienCarte.get(listeApp.get(i)).size(); j++) {
+                listeApp.get(i).affecterCarte(lienCarte.get(listeApp.get(i)).get(j));
+            }
+        } 
+        
     }
+
+    public List<Local> getListeLocaux() {
+        return listeLocaux;
+    }
+
+    public List<Salle> getListeSalles() {
+        return listeSalles;
+    }
+
+    public List<Appareil> getListeApp() {
+        return listeApp;
+    }
+
+    public List<CarteReseau> getListeCarte() {
+        return listeCarte;
+    }
+    
     
     
     /**
@@ -38,7 +83,7 @@ public class Controleur {
      */
     public int chercherNomListeApp (String nom) {
         int i = 0;
-        while (listeApp.get(i++).getNomApp().equals(nom)) {}
+        while (!listeApp.get(i).getNomApp().equals(nom)) {i++;}
         if (listeApp.get(i).getNomApp().equals(nom))
             return i;
         else
@@ -52,7 +97,7 @@ public class Controleur {
      */
     public int chercherNomListeSalle (String nom) {
         int i = 0;
-        while (listeSalles.get(i++).getNomSalle().equals(nom)) {}
+        while (!listeSalles.get(i).getNomSalle().equals(nom)) {i++;}
         if (listeSalles.get(i).getNomSalle().equals(nom))
             return i;
         else
@@ -66,7 +111,7 @@ public class Controleur {
      */
     public int chercherNomListeLocal (String nom) {
         int i = 0;
-        while (listeLocaux.get(i++).getNomLocal().equals(nom)) {}
+        while (!listeLocaux.get(i).getNomLocal().equals(nom)) {i++;}
         if (listeLocaux.get(i).getNomLocal().equals(nom))
             return i;
         else
@@ -81,7 +126,7 @@ public class Controleur {
         int trouve;
         trouve = chercherNomListeApp(nomApp);
         if (trouve > -1)
-            listeApp.get(trouve).setActif(true);
+            listeApp.get(trouve).setActif("true");
     }
     
     /**
@@ -92,7 +137,7 @@ public class Controleur {
         int trouve;
         trouve = chercherNomListeApp(nomApp);
         if (trouve > -1)
-            listeApp.get(trouve).setActif(false);
+            listeApp.get(trouve).setActif("false");
     }
     
     /**
@@ -104,7 +149,7 @@ public class Controleur {
      * @param actif état de l'appareil (activé ou désactivé).
      * @param emp salle dans laquelle se trouve le nouvel appareil.
      */
-    public void ajouterApp (String nomApp, String sysExp, String typeApp, String firm, boolean actif, String emp) {
+    public void ajouterApp (String nomApp, String sysExp, String typeApp, String firm, String actif, String emp) {
         Appareil app = new Appareil(nomApp,sysExp,typeApp,firm,actif);
         listeApp.add(app);
         listeSalles.get(chercherNomListeSalle(emp)).affecterApp(app);
@@ -121,6 +166,7 @@ public class Controleur {
         Salle s = new Salle(nomSalle,capa);
         listeSalles.add(s);
         listeLocaux.get(chercherNomListeLocal(emp)).affecterSalle(s);
+        s.ajoutSalleBDD(emp);
     }
     
     /**
@@ -131,6 +177,7 @@ public class Controleur {
      */
     public void ajouterLocal (String nomLocal, int capa, String adr) {
         Local l = new Local(nomLocal,adr,capa);
+        l.ajoutLocalBDD();
         listeLocaux.add(l);
     }
     
@@ -143,6 +190,7 @@ public class Controleur {
         CarteReseau c = new CarteReseau(adrMac);
         listeCarte.add(c);
         listeApp.get(chercherNomListeApp(nomApp)).affecterCarte(c);
+        c.ajoutCarteBDD(nomApp);
     }
     
     /**
@@ -160,7 +208,7 @@ public class Controleur {
             bd.select("SELECT nomSalle FROM Appareil WHERE nomapp = '"+a.getNomApp()+"'");
             listeSalles.get(chercherNomListeLocal(bd.getResults().getString(1))).desaffecterApp(a);
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, e);
         }
         listeSalles.get(chercherNomListeApp(emp)).affecterApp(a);
         a.setNomApp(nouvNom);
@@ -183,7 +231,7 @@ public class Controleur {
             bd.select("SELECT nomLocal FROM Salle WHERE nomSalle = '"+s.getNomSalle()+"'");
             listeLocaux.get(chercherNomListeLocal(bd.getResults().getString(1))).desaffecterSalle(s);
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, e);
         }
         listeLocaux.get(chercherNomListeApp(emp)).affecterSalle(s);
         s.setNomSalle(nom);
@@ -218,10 +266,12 @@ public class Controleur {
             bd.select("SELECT nomApp FROM Carte_reseau WHERE adrMac='"+c.getAddrMAC()+"'");
             listeApp.get(chercherNomListeApp(bd.getResults().getString(1))).desaffecterCarte(c);
         } catch (SQLException e) {
-            Logger.getLogger(Ajouter.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Controleur.class.getName()).log(Level.SEVERE, null, e);
         }
         listeApp.get(chercherNomListeApp(nomApp)).affecterCarte(c);
         c.setAddrMAC(adrMac);
         c.modifCarteBDD(nomApp);
     }
+    
+
 }
